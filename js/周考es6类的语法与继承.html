@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>Hello</p>
+		<ul class="level-1">
+  <li class="item-i">I</li>
+  <li class="item-ii">II
+    <ul class="level-2">
+      <li class="item-a">A</li>
+      <li class="item-b">B
+        <ul class="level-3">
+          <li class="item-1">1</li>
+          <li class="item-2">2</li>
+          <li class="item-3">3</li>
+        </ul>
+      </li>
+      <li class="item-c">C</li>
+    </ul>
+  </li>
+  <li class="item-iii">III</li>
+</ul>
+	</body>
+</html>
+<script type="text/javascript" src="jquery-3.3.1.min.js" ></script>
+<script lang="JavaScript">
+$(function(){
+			class Person{
+			constructor(id,name,sex){
+				if(arguments.length>0){
+					this.id=id;
+					this.name=name;
+					this.sex=sex;
+				}
+			}
+			eat(){
+				alert(this.name+"在吃")
+			}
+		}
+//		class Programmer{
+//			constructor(id,name,sex,language){
+//				this.language=language;
+//			}
+//			tt(){
+//				
+//			}
+//		}
+	//继承
+	class Programmer extends Person{
+		constructor(id,name,sex,language){
+			super(id,name,sex);
+			this.language=language;
+		}
+		
+	}
+		
+	let s=new Person(01,"wo",18);
+	//s.eat()
+	let s2=new Programmer(02,"ni",20,22)
+	//s2.eat()
+	//	console.log(s2.language)
+		
+	$("p").add("<span>Again</span>").add("li").appendTo("body").html("cc")		//add是“和”的意思
+		
+		
+		
+
+//	$('li.item-a').parentsUntil('.level-1')
+//  .css('background-color', 'red');
+
+})
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
