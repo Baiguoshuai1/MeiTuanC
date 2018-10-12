@@ -24,9 +24,13 @@ gulp.task("copyallfile4",function(){
 	gulp.src("img/**/*")
 	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\img"))
 })
-
+gulp.task("copy-php",function(){
+	gulp.src("*.php")
+	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan"))
+	
+})
 gulp.task("watchall",function(){
-	gulp.watch(["*.html","font/**/*","js/**/*","img/**/*"],["copy-html","copyallfile2","copyallfile3","copyallfile4"])
+	gulp.watch(["*.html","font/**/*","js/**/*","img/**/*","*.php"],["copy-html","copyallfile2","copyallfile3","copyallfile4","copy-php"])
 })
 
 

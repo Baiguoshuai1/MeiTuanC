@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="form1" style="margin:100px auto;box-sizing: border-box;margin-left:500px">
+			<span style="display:none;color:red;font-size:12px"><br/></span>
+			<span style="display: inline-block;width: 80px;">用户名：</span><input type="text" name='username' id="t1" msg="用户名"/ ><span style="margin-left: 4px;"></span><br/>
+			<span style="display: inline-block;width: 80px;" >创建密码：</span><input type="password" name='userpass' id="t2" msg="密码" />&nbsp;<span class="panduan1" style="color:#333"></span><br/>
+			<span style="display: inline-block;width: 80px;">确认密码：</span><input type="password" id="t3" msg="密码" />&nbsp;<span class="panduan2" style="color:red"></span><br/>
+			<br/><input type="submit" id="btn02" value="注册"style="margin-left:100px"/>
+		</form>
+		<div id="T"></div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+<script language="JavaScript">
+$(function(){
+	function blu(){
+		var result="";
+			 $.ajax({
+				type:"POST",
+				url:"checkName.php",
+				async:false,
+				data:{username:$("#t1").val()},
+				success:function(mes){
+					tes(mes);
+				result=mes;	
+				}
+			});
+			return result;			//return出回调函数的返回值（后台的返回值）
+		}
+	function tes(mes){
+				if(mes=="ok"){
+					$('span')[2].style.color="#333";
+					$("span")[2].innerHTML="√";	
+				}else if(mes=="no"){
+					$('span')[2].style.color="red";
+					$("span")[2].innerHTML="×，用户名已被使用";
+				}else{
+					$('span')[2].style.color="red";
+					$("span")[2].innerHTML="×，服务器错误";
+				
+				}
+	}
+	function setCookie(c_name,value,expiredays){		//存储cookies
+		var exdate=new Date()
+		exdate.setDate(exdate.getDate()+expiredays)
+		document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+	}	
+	function inpFunc(){					//验证input不为空
+     let num=0;
+     let str="";
+	  $("input").each(function(n){	//.each(函数)是可以循环找this（有多少个input就循环多少次）这个必须循环因为每个文本框的msg不一样
+          if($(this).val()=="")					//.val()是可以添加文本框的值，也可获取
+          {
+               num++;
+               str+=$(this).attr("msg")+"不能为空！\r\n";//.attr()是返回指定属性的值
+          }
+      });
+     if(num>0){
+          $('span')[0].style.display="block";
+          $('span')[0].innerHTML=str;
+          return false;//对jquery函数有效，此处无效
+   		 }
+     else{
+          return true;//对jquery函数有效
+		}
+    
+   }
+	function Tru(){
+		let psdOne=$("#t2").val();
+		let psdTwo=$("#t3").val();
+		if(psdOne==psdTwo){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	var ret2=null;
+	$("#t1").change(function(){
+			ret2=blu();
+			$('span')[0].style.display="none";
+			console.log(ret2)
+	});
+	$("#t2").keyup(function(){
+			$('span')[0].style.display="none";
+			$(".panduan1").html("√")
+	})
+	$("#t3").blur(function(){
+		$('span')[0].style.display="none";
+		let ret4=Tru();
+		if(ret4){
+			$(".panduan2")[0].style.color="#333";
+			$(".panduan2").html("√")
+		}else{
+			$(".panduan2")[0].style.color="red";
+			$(".panduan2").html("密码不一致")
+		}
+			
+				
+			
+	})
+	
+	var eve=event||window.event
+	$("form").submit(function(eve){
+			 if(!eve.isDefaultPrevented()){	//	!!!一定要组织表单默认提交 type = 'button'或者event.preDefault(),不然点击按钮会立马刷新;而且用户名和密码会显示在地址栏上
+                eve.preventDefault();
+            }
+		let ret1=inpFunc();					//input不为空
+		let ret3=Tru();
+		if(ret1&&ret2=="ok"&&ret3){
+			$.ajax({							//接口
+			   type:"POST",
+			   url:"save.php",			//地址
+			   data:$('#form1').serialize(),	//json数据   key/value
+			 //data:{username:$("#t1").val(),userpass:$("#t2").val(),}
+			 //data:{username:$("#t1")[0].value,userpass:$("#t2")[0].value},						//传输的数据
+			   success:function(msg){		//msg为后台返回值
+				if(msg=='1'){
+					setCookie($('#t1').val(),$('#t2').val(),7);	//存储cookie					
+					alert("注册成功");
+					//location.href=document.referrer||host + "MeiTuanLogin1.html";
+					location.href="MeiTuanLogin1.html";
+					//console.log(document.referrer).
+				}else{
+					alert('服务器错误');
+						}				
+					}
+			});
+		}else if($('input')[0].value==""){
+			  $('span')[0].innerHTML="用户名不能为空！"	//用来整理提示顺序	
+			}else if($('#t2').val()==""){
+			  $('span')[0].innerHTML="密码不能为空！"
+			}else if(!ret3){
+				$('span')[0].style.display="none";
+				$(".panduan2").html("密码不一致")
+			}
+
+		});
+				
+		
+		
+		
+		
+		
+	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
