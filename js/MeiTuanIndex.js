@@ -1,4 +1,5 @@
-	let slider=new Slider(				// 轮播图
+$(function(){
+		let slider=new Slider(				// 轮播图
 		$(".slider-imgBox")[0],
 		550,
 		240,
@@ -12,3 +13,11 @@
 		"#",
 		3000
 	)
+		
+//var localCookie=document.cookie;
+	console.log(document.cookie)
+//var cookieName=localCookie.split(";")[localCookie.split(";").length-1].split("=")[0];
+//	if(cookieName.length>0){
+//		location.href="../html/MeiTuanLoginBack.html"
+//	}
+})

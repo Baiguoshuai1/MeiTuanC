@@ -13,13 +13,14 @@
 	</body>
 </html>
  <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+ <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
  <script language="JavaScript">
  	$(function(){
  		function setCookie(c_name,value,expiredays){		//存储cookies
 			var exdate=new Date()
 			exdate.setDate(exdate.getDate()+expiredays)
-			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
-		}
+			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
+		}	
  		var eve=event||window.event;
  		$("#form2").submit(function(eve){
  			if(!eve.isDefaultPrevented()){
@@ -31,9 +32,10 @@
  				data:$("#form2").serialize(),
  				success:function(mes){
  					if(mes==($("#t1").val())){
- 						setCookie($('#t1').val(),$('#t2').val()+".",7);
+ 						//setCookie($('#t1').val(),$('#t2').val(),1);
+ 					$.cookie($('#t1').val(),$('#t2').val(),{expires:1,path:"/"})
  						location.href="MeiTuanLoginBack.html";
- 						console.log(document.cookie	)
+ 						console.log(document.cookie)
  					}else{
  						alert("密码账号错误！")
  					}

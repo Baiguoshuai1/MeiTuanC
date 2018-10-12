@@ -1,8 +1,29 @@
 //MeiTuanLogin1.html
 var localCookie=document.cookie;
 var cookieName=localCookie.split(";")[localCookie.split(";").length-1].split("=")[0];
+var cookieNameNum=localCookie.split(";")
+console.log(cookieNameNum)
+var strCookieN="";
+	
+	function deleteCookie(){
+		for(let i=0;i<cookieNameNum.length;i++){
+			strCookieN=cookieNameNum[i].split("=")[0];
+	  		var date=new Date(); 
+	  		date.setTime(date.getTime()-10000); 
+	 		document.cookie=strCookieN+"=s; expires="+date.toGMTString()+";path="+"/";//如果给cookie设置了path，删除也要设置同样的格式
+		//$.cookie(strCookieN,null)
+			console.log(strCookieN)
+		}
+		location.href="../MeiTuanIndex.html";
+		console.log(localCookie)
+	}
+	
+	$(".exit").click(function(){
+		deleteCookie();
+		//location.href="../MeiTuanIndex.html"
+	})
 	$(".username").html(function(){			//改变用户名
-		return cookieName;
+		return decodeURIComponent(cookieName);
 	})
 	$(".username").click(function(){
 		console.log(localCookie)
@@ -21,3 +42,4 @@ var cookieName=localCookie.split(";")[localCookie.split(";").length-1].split("="
 		"#",
 		3000
 	)
+
