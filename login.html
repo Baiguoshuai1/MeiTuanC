@@ -5,9 +5,53 @@
 		<title></title>
 	</head>
 	<body>
-		<form>
-			用户名:<input types="text" name="username"/ /><>	
-			密码:<input types="text" name="username"/ />
+		<form id="form2" style="margin:100px 600px">
+			<span style="display: inline-block;width:60px">用户名:</span><input types="text" id="t1" name="username"/ /></br></br>
+			<span style="display: inline-block;width:60px">密码:</span><input types="text" id="t2" name="userpass"/ /></br>
+			<input type="submit" value="登录" class="sub" style="margin-top: 50px;margin-left: 80px;"/>
 		</form>
 	</body>
 </html>
+ <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+ <script language="JavaScript">
+ 	$(function(){
+ 		function setCookie(c_name,value,expiredays){		//存储cookies
+			var exdate=new Date()
+			exdate.setDate(exdate.getDate()+expiredays)
+			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+		}
+ 		var eve=event||window.event;
+ 		$("#form2").submit(function(eve){
+ 			if(!eve.isDefaultPrevented()){
+ 				eve.preventDefault();
+ 			}
+ 			$.ajax({
+ 				type:"POST",
+ 				url:"loginCheck.php",
+ 				data:$("#form2").serialize(),
+ 				success:function(mes){
+ 					if(mes==($("#t1").val())){
+ 						setCookie($('#t1').val(),$('#t2').val()+".",7);
+ 						location.href="MeiTuanLogin1.html";
+ 						console.log(document.cookie	)
+ 					}else{
+ 						alert("密码账号错误！")
+ 					}
+ 				}
+ 			})
+ 			
+ 			
+ 		})
+ 	})
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ </script>

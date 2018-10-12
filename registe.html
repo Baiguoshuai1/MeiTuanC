@@ -92,10 +92,10 @@ $(function(){
 	$("#t3").blur(function(){
 		$('span')[0].style.display="none";
 		let ret4=Tru();
-		if(ret4){
+		if(ret4&&($("#t3").val()!=="")){
 			$(".panduan2")[0].style.color="#333";
 			$(".panduan2").html("√")
-		}else{
+		}else if(!ret4){
 			$(".panduan2")[0].style.color="red";
 			$(".panduan2").html("密码不一致")
 		}

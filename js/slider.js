@@ -179,7 +179,7 @@ Slider.prototype.goImg=function(transOrd){//1
 	//B、改豆豆
 	this.showLi();
 }
-var arr=["../第一阶段/白国帅 机试/pc端/index.html","../第一阶段/作业/麦田国际/index.html","../第一阶段/作业/考试/index.html","../第一阶段/作业/支付宝/支index.html","../../第一阶段/作业/QQ作业 白国帅/index.html"]
+var arr=["../../白国帅 机试/pc端/index.html","../..//作业/麦田国际/index.html","../../作业/考试/index.html","../../作业/支付宝/支index.html","../../作业/QQ作业 白国帅/index.html"]
 Slider.prototype.goURL=function(i){
 	location.href=arr[i];
 }

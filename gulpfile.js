@@ -29,6 +29,7 @@ gulp.task("copy-php",function(){
 	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan"))
 	
 })
+gulp.task("build",["copy-html","copyallfile2","copyallfile3","copyallfile4","copy-php"])
 gulp.task("watchall",function(){
 	gulp.watch(["*.html","font/**/*","js/**/*","img/**/*","*.php"],["copy-html","copyallfile2","copyallfile3","copyallfile4","copy-php"])
 })
