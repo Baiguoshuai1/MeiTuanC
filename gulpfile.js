@@ -1,37 +1,36 @@
 var gulp=require("gulp");
 
-gulp.task("copy-html",function(){
+gulp.task("copy-index",function(){
 		//copy-MeiTuanIndex
-	gulp.src("*.html").pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan"))
+	gulp.src("*.html")
+	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan"))
 })
-//gulp.task("watchall",function(){
-//	gulp.watch("MeiTuanIndex.html",["copy-html"])
-//})
-
-//gulp.task("copyallfile1",function(){
-//	gulp.src("Sass/**/*")
-//	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\Sass"))
-//})
-gulp.task("copyallfile2",function(){
+gulp.task("copy-html",function(){
+	gulp.src("html/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\html"))
+})
+gulp.task("copy-font",function(){
 	gulp.src("font/**/*")
 	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\font"))
 })
-gulp.task("copyallfile3",function(){
+gulp.task("copy-js",function(){
 	gulp.src("js/**/*")
 	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\js"))
 })
-gulp.task("copyallfile4",function(){
+gulp.task("copy-img",function(){
 	gulp.src("img/**/*")
 	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\img"))
 })
 gulp.task("copy-php",function(){
-	gulp.src("*.php")
-	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan"))
+	gulp.src("php/**/*")
+	.pipe(gulp.dest("D:\\phpStudy\\PHPTutorial\\WWW\\gulpMeiTuan\\php"))
 	
 })
-gulp.task("build",["copy-html","copyallfile2","copyallfile3","copyallfile4","copy-php"])
+//复制
+gulp.task("build",["copy-index","copy-html","copy-font","copy-js","copy-img","copy-php"])		
+//监听
 gulp.task("watchall",function(){
-	gulp.watch(["*.html","font/**/*","js/**/*","img/**/*","*.php"],["copy-html","copyallfile2","copyallfile3","copyallfile4","copy-php"])
+	gulp.watch(["*.html","html/**/*","font/**/*","js/**/*","img/**/*","php/**/*"],["copy-index","copy-html","copy-font","copy-js","copy-img","copy-php"])
 })
 
 

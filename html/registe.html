@@ -15,14 +15,14 @@
 		<div id="T"></div>
 	</body>
 </html>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
 <script language="JavaScript">
 $(function(){
 	function blu(){
 		var result="";
 			 $.ajax({
 				type:"POST",
-				url:"checkName.php",
+				url:"../php/checkName.php",
 				async:false,
 				data:{username:$("#t1").val()},
 				success:function(mes){
@@ -87,7 +87,10 @@ $(function(){
 	});
 	$("#t2").keyup(function(){
 			$('span')[0].style.display="none";
-			$(".panduan1").html("√")
+			if($(this).val()!==""){	
+				$(".panduan1").html("√")		//后期正则验证
+			}
+			
 	})
 	$("#t3").blur(function(){
 		$('span')[0].style.display="none";
@@ -114,7 +117,7 @@ $(function(){
 		if(ret1&&ret2=="ok"&&ret3){
 			$.ajax({							//接口
 			   type:"POST",
-			   url:"save.php",			//地址
+			   url:"../php/save.php",			//地址
 			   data:$('#form1').serialize(),	//json数据   key/value
 			 //data:{username:$("#t1").val(),userpass:$("#t2").val(),}
 			 //data:{username:$("#t1")[0].value,userpass:$("#t2")[0].value},						//传输的数据
@@ -123,7 +126,7 @@ $(function(){
 					setCookie($('#t1').val(),$('#t2').val(),7);	//存储cookie					
 					alert("注册成功");
 					//location.href=document.referrer||host + "MeiTuanLogin1.html";
-					location.href="MeiTuanLogin1.html";
+					location.href="MeiTuanLoginBack.html";
 					//console.log(document.referrer).
 				}else{
 					alert('服务器错误');
