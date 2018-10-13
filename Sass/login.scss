@@ -1,0 +1,214 @@
+@charset "utf-8";
+$a-color:#666;
+$pub:#2bb8aa;
+.checkBoxClick{
+    border-color:#ddd!important;
+}
+body{
+    background-color: #fff;
+    header{
+        height:54px;margin:40px auto 30px;
+        a img{
+            width:82px;height:54px;float:left;
+        }
+    }
+    .body-content{
+        margin:0 auto;clear: both;margin-bottom: 70px;display: block;height:370px;
+        .left-imgBox{
+            float: left;height:370px;margin: 0 115px 0 0;
+            img{
+                width:480px;height:100%;
+            }
+        }
+        .right-loginBox{
+            a{color:$pub;float: right;}
+            a:hover{text-decoration: underline;}
+            float: left;margin: 0 auto;background-color: #fff;width:270px;height:auto;
+            .validate{
+                font-size:12px;padding:10px;border:1px solid #f5d8a7;margin-bottom: 10px;border-radius: 2px;
+                background-color: #fff6db;box-sizing: border-box;position: relative;
+                img{
+                    width:17px;height: 17px;margin-right: 5px;vertical-align: middle;
+                }
+                span{
+                    display:inline-block;position: absolute;top:12px;
+                }
+            }
+            .login-typeBox{
+                span{
+                    font-weight: 400;color:$a-color;font-size: 14px;float: left;
+                }
+                a{
+                  color:$a-color;position: relative;z-index: 2;cursor: pointer;
+                  img{
+                      vertical-align: top;margin-left: 4px;
+                  } 
+                }
+            }
+            i{  font-size: 18px;font-weight:700;color:#ddd}
+            .elem{
+                padding:8px 0;position: relative;
+                i{
+                   position: absolute;top:36px;left:9px;
+                }
+                input{
+                    margin-top:10px;width:230px;height:24px;line-height:24px;padding:5px;padding-left: 33px;border: 1px solid #aaa;;font-size: 14px;
+                }
+            }
+            .psd{
+                i{top:16px}
+                input{margin:0}
+            }
+            .form-check{
+                display: none;
+                input{
+                    width:62px;padding:5px;margin-top:0 ;
+                }
+                img{
+                    cursor: pointer;border: 1px solid #CCC;vertical-align: top;
+                }
+                span{
+                    cursor: pointer;margin-left: 8px;color: $pub;
+                }
+                span:hover{text-decoration:underline;}
+            }
+            .setcookie-box{
+                input{
+                    display: none;
+                    }
+                label{
+                    color:#333;position: relative;padding-left: 20px;
+                    span{
+                        display:inline-block;width:14px;height:14px;border:1px solid #ddd;box-sizing: border-box;
+                       position: absolute;left:0px;top:1px;border-radius: 2px;overflow: hidden;// vertical-align: bottom;margin-right: 6px;margin-top: 2px;position: relative;
+                        }
+//                  span:hover{
+//                      border-color: $pub;
+//                  }
+//                  i{
+//                      font-size: 14px;font-weight:600;display: inline-block;color:$pub;position: absolute;top:-2px;left:-1px;display: block;
+//                      }
+//                  span:hover{
+//                      border-color:$pub;
+//                    }
+                    }
+                 label:after{   
+                        position:absolute;top:2px;left:1px;display: none;width:12px;height:12px;content:"";
+                        background-image:url(../img/login/checkBox.png);//border: 1px solid $pub;
+                        background-size:11px 12px;border-radius: 0px;
+                }
+                label:before{
+                    position:absolute;display: block;width:12px;height:12px;content:"";border:0px solid #ddd;border-radius: 2px;
+                }
+//              input:checked+label:before{
+//                //  background-color: pink;
+//                 // content:"";
+//              }
+////              input:checked+label:before:hover{
+////                  border:1px solid $pub;
+////                  content:"";
+////              }
+                input:checked+label:after{
+                    display: block;  
+                }
+            }
+            .subBox{
+                input{
+                    width:100%;text-align: center;padding:6px;padding: 7px 20px 6px;border:0;
+                    font-size: 14px;color:#fff;height:auto;background-image: linear-gradient(to bottom,#2ec3b4,#2db3a6);
+                    font-weight: 700;line-height: 1.5;cursor: pointer;
+                    letter-spacing: .1em;border-radius: 2px;border-bottom: 1px solid #008177;
+                }
+                input:hover{background-image: linear-gradient(to top,#2db3a6,#2db3a6);}
+            }
+            .registe{
+                font-size: 14px;
+                a{float:none}
+            }
+            .pingtaiBox{
+                display:block;margin-top: 20px;
+                h3{
+                    position: relative;
+                    margin-bottom: 30px;
+                    border-bottom: 1px solid #CCC;
+                    width: 100%;
+                    height: 0;
+                    overflow: visible; 
+                    span{
+                        position: absolute;
+                        top: -10px;
+                        left: 50%;
+                        margin-left: -75px;
+                        width: 150px;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #666;
+                        background: #FFF;
+                    }  
+                }
+                .pingtaiBox-i{
+                    width:100%;position: relative;
+                    a{  
+                        i{
+                            font-size: 19px;position: absolute;left:50%;
+                            }
+                        .qq{color:#8dcbf4;margin-left:-25px}
+                        .weibo{color:#f79a89;margin-left:10px}
+                    }
+                }
+            }
+        }
+    }
+    footer{
+       margin:0 auto;margin-bottom: 30px;box-sizing: border-box;color:#999;
+       a{color:#999}
+       .ceil-box{
+            margin-bottom: 20px;
+            padding: 12px 0;
+            border-top: 1px solid #EEE;
+            border-bottom: 1px solid #EEE;
+        ul{
+            float: left;
+            width: 594px;
+            color: #EEE;
+            li{
+                float: left;
+                margin: 5px 0;
+                padding: 0 16px;
+                line-height: 14px;
+                border-right: 1px solid #EEE;
+               a{
+                   color:#999;
+               }
+            }
+            .first{
+                padding-left: 0;
+            }
+            .last{
+                padding-right: 0;
+            }
+        }
+        a{
+            img{
+                height:24px;vertical-align: middle;
+            }
+        }
+       }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ $(function(){
 	)
 		
 //var localCookie=document.cookie;
-	console.log(document.cookie)
+	console.log(document.cookie.length)
 //var cookieName=localCookie.split(";")[localCookie.split(";").length-1].split("=")[0];
 //	if(cookieName.length>0){
 //		location.href="../html/MeiTuanLoginBack.html"

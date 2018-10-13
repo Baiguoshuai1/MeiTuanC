@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<meta charset="utf-8">
+		<title>登录|白国帅的美团网</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/login.css">
 	</head>
 	<body>
-		<form id="form2" style="margin:100px 600px">
-			<span style="display: inline-block;width:60px">用户名:</span><input types="text" id="t1" name="username"/ /></br></br>
-			<span style="display: inline-block;width:60px">密码:</span><input types="text" id="t2" name="userpass"/ /></br>
-			<input type="submit" value="登录" class="sub" style="margin-top: 50px;margin-left: 80px;"/>
-		</form>
+		<header class="loginW">
+			<a href="../MeiTuanIndex.html"><img src="../img/login/1.png" /></a>
+		</header>
+		<div class="content">
+			<div class="loginW body-content">
+				<div class="left-imgBox">
+					<img src="../img/login/bk.jpg" />
+				</div>
+				<div class="right-loginBox">
+					<form id="form2">
+						<div class="validate" style="visibility: hidden;">
+							<img src="../img/login/22.png"/><span class="prompt">请输入账号</span>
+						</div>
+						<div class="login-typeBox" >
+							<span>账号登录</span><a>手机动态码登录<img width="11" height="14" src="../img/login/phone.png"/></a>
+						</div>
+						<div class="elem">
+							<i class="iconfont">&#xe8da;</i>
+							<input types="text" id="t1" name="username" placeholder="手机号/用户名/邮箱"/>
+						</div>
+						<div class=" elem psd">
+							<i class="iconfont">&#xe648;</i>
+							<input types="text" id="t2" name="userpass" placeholder="密码"/>
+						</div>
+						<div class="elem form-check">
+							<input type="text" placeholder="验证码"/>
+							<img height="36" width="72" class="yanzheng" src="../img/login/captcha (1).jpg"/>
+							<span class="yanzheng-text">看不清楚？换一张</span>
+						</div>
+						<div class="setcookie-box">
+							<input type="checkbox" value="1" name="auto_login" id="autologin" class="cookie-checkbox" />
+							<label class="normal" for="autologin"><span></span>7天内自动登陆</label>	
+							<a href="">忘记密码?</a>
+						</div>
+						<div class="elem subBox">
+							<input type="submit" class="sub-btn" value="登录"/>
+						</div>
+						<p class="registe">
+							还没有账号？<a href="registe.html">免费注册</a>
+						</p>
+					</form>
+					<div class="pingtaiBox">
+						<h3 class="tile">
+							<span class="sub-title">用合作网站账号登录</span>
+						</h3>
+						<div class="pingtaiBox-i">
+							<a href="#" target="_blank"><i class="iconfont qq">&#xe6d3;</i></a>
+							<a href="MeiTuanLoginBack.html" target="_blank"><i class="iconfont weibo">&#xe658;</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="loginW">
+			<div class="ceil-box">
+				<ul>
+					<li class="first"><a href="">关于美团</a></li>
+					<li><a href="">关于美团</a></li>
+					<li><a href="">加入我们</a></li>
+					<li><a href="">商家入驻</a></li>
+					<li><a href="">帮助中心</a></li>
+					<li class="last"><a href="">美团手机版</a></li>
+				</ul>
+				<a href=""><img width="276" height="24" src="../img/login/footer-commitment.png"/></a>
+			</div>
+			<div>
+				<p>
+					©2018 <a href="">美团网团购</a> meituan.com <a href="">京ICP证070791号</a> 京公网安备11010502025545号 <a href="">电子公告服务规则</a>
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>
  <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
@@ -38,12 +107,36 @@
  						console.log(document.cookie)
  					}else{
  						alert("密码账号错误！")
- 					}
+ 					}	
  				}
  			})
- 			
- 			
  		})
+ 		$(".normal").click(function(){
+ 			//$(this).children("span").children("i").attr("style","display:block")
+ 			//$("this").children("input+label").css({borderColor:"pink"})
+ 			if($("#autologin:eq(0)").is(":checked")){
+ 				$(this).children("span").attr("style","border-color: #2bb8aa")
+ 			}
+// 			}else{
+// 				$(this).children("sapn").attr("style","")
+// 			}
+ 			console.log($("#autologin:eq(0)").is(":checked"))
+ 		})
+// 		if($("#autologin")[0].style.checked=="checked"){
+// 			alert("yes")
+// 		}
+		$(".normal").children("span").hover(function(){
+			$(this).attr("style","border-color: #2bb8aa;")
+			console.log($("#autologin:eq(0)").is(":checked"))
+		},function(){
+			if(!$("#autologin:eq(0)").is(":checked")){
+			$(this).attr("style","border-color:#ddd")
+			}
+			console.log($("#autologin:eq(0)").is("checked"))
+		})
+//		$(".normal")..blur(function(){
+//			
+//		})
  	})
  	
  	

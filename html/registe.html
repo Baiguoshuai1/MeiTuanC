@@ -155,7 +155,12 @@ $(function(){
 	})
 	
 	
-	
+	function setCookie(c_name,value,expiredays){
+		var et=new Date();
+		et.setDate(et.getDate()+expiredays)
+		document.cookie=c_name+"="+escape(value)+(expiredays==null ? "" : ";expire="+et.toGMTstring()+";path="+"/";
+		
+	}
 	
 	
 	
