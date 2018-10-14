@@ -6,6 +6,7 @@ $pub:#2bb8aa;
 }
 body{
     background-color: #fff;
+        a:hover{text-decoration: underline!important}
     header{
         height:54px;margin:40px auto 30px;
         a img{
@@ -22,7 +23,6 @@ body{
         }
         .right-loginBox{
             a{color:$pub;float: right;}
-            a:hover{text-decoration: underline;}
             float: left;margin: 0 auto;background-color: #fff;width:270px;height:auto;
             .validate{
                 font-size:12px;padding:10px;border:1px solid #f5d8a7;margin-bottom: 10px;border-radius: 2px;
@@ -154,7 +154,9 @@ body{
                             font-size: 19px;position: absolute;left:50%;
                             }
                         .qq{color:#8dcbf4;margin-left:-25px}
+                        .qq:hover{color:#74b8e8}
                         .weibo{color:#f79a89;margin-left:10px}
+                        .weibo:hover{color:#fd6b5c}
                     }
                 }
             }
@@ -192,8 +194,8 @@ body{
         a{
             img{
                 height:24px;vertical-align: middle;
+                }
             }
-        }
        }
     }
 }

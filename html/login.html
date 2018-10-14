@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<title>登录|白国帅的美团网</title>
 		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
-		<link rel="stylesheet" href="../css/public.css">
-		<link rel="stylesheet" href="../css/login.css">
+		<link rel="stylesheet" href="../css/public.css"/>
+		<link rel="stylesheet" href="../css/login.css"/>
 	</head>
 	<body>
 		<header class="loginW">
@@ -34,7 +34,7 @@
 						</div>
 						<div class="elem form-check">
 							<input type="text" placeholder="验证码"/>
-							<img height="36" width="72" class="yanzheng" src="../img/login/captcha (1).jpg"/>
+							<img height="36" width="72" class="yanzhengImg" src="../img/login/captcha (1).jpg"/>
 							<span class="yanzheng-text">看不清楚？换一张</span>
 						</div>
 						<div class="setcookie-box">
@@ -54,8 +54,10 @@
 							<span class="sub-title">用合作网站账号登录</span>
 						</h3>
 						<div class="pingtaiBox-i">
-							<a href="#" target="_blank"><i class="iconfont qq">&#xe6d3;</i></a>
-							<a href="MeiTuanLoginBack.html" target="_blank"><i class="iconfont weibo">&#xe658;</i></a>
+							<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=https%3A%2F%2Fpassport
+								.meituan.com%2Faccount%2Fcallback%2Ftencent&client_id=214506" target="_blank"><i class="iconfont qq">&#xe6d3;</i></a>
+							<a href="https://api.weibo.com/oauth2/authorize?response_type=code&redirect_uri=https%3A%2F%2Fpassport.meituan.com%2Faccount
+								%2Fcallback%2Fsina&client_id=579809138" target="_blank"><i class="iconfont weibo">&#xe658;</i></a>
 						</div>
 					</div>
 				</div>
@@ -73,7 +75,7 @@
 				</ul>
 				<a href=""><img width="276" height="24" src="../img/login/footer-commitment.png"/></a>
 			</div>
-			<div>
+			<div class="floor-box">
 				<p>
 					©2018 <a href="">美团网团购</a> meituan.com <a href="">京ICP证070791号</a> 京公网安备11010502025545号 <a href="">电子公告服务规则</a>
 				</p>
@@ -85,6 +87,23 @@
  <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
  <script language="JavaScript">
  	$(function(){
+ 		var checkCount=0;
+ 		var checkNumber=parseInt(Math.random()*20)
+   		function radomCheckIMg(){		//生成随机验证码图片
+	 		$(".yanzhengImg").attr("src",function(){	//每次打开网页生成不同的验证码图片
+	 			return "../img/login/captcha ("+parseInt(Math.random()*20)+").jpg";	//函数里面的图片号码不能再使用变量，得直接使用随机数
+	 		})
+   		}
+	
+ 		$(".yanzhengImg").attr("src",function(){	//每次打开网页生成不同的验证码图片
+ 			return "../img/login/captcha ("+checkNumber+").jpg";
+ 		})
+ 		$(".yanzheng-text").click(function(){		//点击换验证码图片
+ 			radomCheckIMg();
+ 		})
+ 		$(".yanzhengImg").click(function(){		//点击换验证码图片
+ 			radomCheckIMg();
+ 		})
  		function setCookie(c_name,value,expiredays){		//存储cookies
 			var exdate=new Date()
 			exdate.setDate(exdate.getDate()+expiredays)
@@ -95,22 +114,38 @@
  			if(!eve.isDefaultPrevented()){
  				eve.preventDefault();
  			}
- 			$.ajax({
+ 			if(checkCount>2){
+ 				$(".form-check")[0].style.display="block";
+ 			}
+ 			//if(checkCount>2&&验证码正确||){
+ 				$.ajax({
  				type:"POST",
  				url:"../php/loginCheck.php",
  				data:$("#form2").serialize(),
  				success:function(mes){
  					if(mes==($("#t1").val())){
- 						//setCookie($('#t1').val(),$('#t2').val(),1);
- 					$.cookie($('#t1').val(),$('#t2').val(),{expires:1,path:"/"})
+ 						if($("#autologin:eq(0)").is(":checked")){
+ 							$.cookie($('#t1').val(),$('#t2').val(),{expires:7,path:"/"})
+ 						}else{
+ 							$.cookie($('#t1').val(),$('#t2').val())
+ 						}
  						location.href="MeiTuanLoginBack.html";
  						console.log(document.cookie)
  					}else{
- 						alert("密码账号错误！")
- 					}	
- 				}
- 			})
+ 						checkCount++;
+ 						$(".validate")[0].style.visibility="visible";
+ 						$(".prompt").html("账号或密码错误，请重新输入")
+ 						}
+ 					}
+ 				})
+// 			}else if($('#t1').val()==""){
+//				 $(".prompt").html("用户名不能为空")	//用来整理提示顺序	
+//			}else if($('#t2').val()==""){
+//			  $(".prompt").html("密码不能为空")
+//			}
  		})
+ 			
+ 			 			
  		$(".normal").click(function(){
  			//$(this).children("span").children("i").attr("style","display:block")
  			//$("this").children("input+label").css({borderColor:"pink"})
