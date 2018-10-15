@@ -2,50 +2,118 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>注册 | 白国帅的美团网</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/public.css"/>
+		<link rel="stylesheet" href="../css/registe.css"/>		
 	</head>
 	<body>
-		<form id="form1" style="margin:100px auto;box-sizing: border-box;margin-left:500px">
-			<span style="display:none;color:red;font-size:12px"><br/></span>
-			<span style="display: inline-block;width: 80px;">用户名：</span><input type="text" name='username' id="t1" msg="用户名"/ ><span style="margin-left: 4px;"></span><br/>
-			<span style="display: inline-block;width: 80px;" >创建密码：</span><input type="password" name='userpass' id="t2" msg="密码" />&nbsp;<span class="panduan1" style="color:#333"></span><br/>
-			<span style="display: inline-block;width: 80px;">确认密码：</span><input type="password" id="t3" msg="密码" />&nbsp;<span class="panduan2" style="color:red"></span><br/>
-			<br/><input type="submit" id="btn02" value="注册"style="margin-left:100px"/>
-		</form>
-		<div id="T"></div>
+		<header>
+			<div class="regW header-contentBox">
+				<a href="../MeiTuanIndex.html" class="header-left"><img width="54" height="36" src="../img/login/1.png" /></a>
+				<div class="header-right">
+					<span class="tip">已有美团账号?</span>
+					<a href="login.html" class="login-btn">登录</a>
+				</div>
+			</div>
+		</header>
+		<div class="regW 	content">
+			<div class="form-box">
+				<form id="form1">
+					<div class="pubInputBox form-content-oneBox">
+						<label>手机号</label>
+						<input class="formInput" type="text" name='username' id="t1" msg="手机号"/ >
+						<span class="inline-tip spec">注册成功后，全美团通用</span>	
+						<span class="inline-tip input-tip">
+							<img class="checkingImg" src="../img/login/22.png"/>
+							<span class="changeText1">请输入您的手机号码</span>
+							<a href="login.html" style="display: none">直接登录</a>
+						</span>
+					</div>
+					<div class="form-content-twoBox">
+						<div class="phoneNum-btnBox">
+							<input type="button" class="phoneNum-btn" value="免费获取短信动态码" />
+						</div>
+					</div>
+					<div class="pubInputBox form-content-threeBox">
+						<label>短信动态码</label><input class="formInput" type="text" name="userphone" id="t2" msg="动态码" />
+						<span class="inline-tip input-tip">
+							<img src="../img/login/22.png"/><span>请随便输入</span>
+						</span>
+					</div>
+					<div class="pubInputBox form-content-fourBox">
+						<label>创建密码</label><input class="formInput" type="password" name='userpass' id="t3" msg="密码" />
+						<span class="inline-tip input-tip"><img src="../img/login/22.png"/>
+							<span>请填写密码</span>
+						</span>
+						<div class="strength">
+							<div class="strength-colorBox"></div>
+							<div class="strength-letter">
+								<span class="strength-label">弱</span>
+								<span class="strength-label">中</span>
+								<span class="strength-label last-label">强</span>
+							</div>
+						</div>					
+					</div>
+					<div class="pubInputBox form-content-fiveBox">
+						<label>确认密码</label>
+						<input class="formInput" type="password" id="t4" msg="密码" />
+						<span class="inline-tip input-tip">
+							<img src="../img/login/22.png"/>
+							<span>请再次输入密码</span>
+						</span>
+					</div>
+					<div class="pubInputBox form-content-sixBox">
+						<input class="sub-btn" type="submit" value="同意以下协议并注册"/>
+					</div>
+				</form>	
+			</div>
+			<div class="pubInputBox term">
+				<a class="XY" href="http://www.meituan.com/about/terms" target="_blank">《美团网用户协议》</a>
+			</div>
+		</div>
+		<footer>
+			<p>
+				©<a class="f1" href="https://www.meituan.com">meituan.com</a>&nbsp;
+				<a class="f1" target="_blank" href="http://www.miibeian.gov.cn/">京ICP证070791号</a>
+				京公网安备11010502025545号
+			</p>
+		</footer>
 	</body>
 </html>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
 <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
 <script language="JavaScript">
 $(function(){
+	var result=null;
 	function blu(){
-		var result="";
 			 $.ajax({
 				type:"POST",
 				url:"../php/checkName.php",
-				async:false,
+				async:true,
 				data:{username:$("#t1").val()},
 				success:function(mes){
 					tes(mes);
-				result=mes;	
+				    result=mes;
 				}
 			});
-			return result;			//return出回调函数的返回值（后台的返回值）
 		}
 	function tes(mes){
-				if(mes=="ok"){
-					$('span')[2].style.color="#333";
-					$("span")[2].innerHTML="√";	
-				}else if(mes=="no"){
-					$('span')[2].style.color="red";
-					$("span")[2].innerHTML="×，用户名已被使用";
-				}else{
-					$('span')[2].style.color="red";
-					$("span")[2].innerHTML="×，服务器错误";
-				
-				}
+		$(".input-tip")[0].style.display="inline-block";
+		$(".input-tip").children(".changeText1").html("");
+		if(mes=="ok"){
+			$(".checkingImg").attr("src","../img/login/dui.png")
+		}else if(mes=="no"){
+			$("#t1")[0].style.borderColor="red";
+			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".input-tip").children(".changeText1").html("该用户已被绑定,");
+			$(".input-tip")[0].lastElementChild.style="block";
+		}else{
+			$('#t1')[0].style.borderColor="red";
+			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".input-tip").children(".changeText1").html("网络出现问题，请重试");
 	}
+}
 	function setCookie(c_name,value,expiredays){		//存储cookies
 		var exdate=new Date()
 		exdate.setDate(exdate.getDate()+expiredays)
@@ -54,68 +122,86 @@ $(function(){
 	function inpFunc(){					//验证input不为空
      let num=0;
      let str="";
-	  $("input").each(function(n){	//.each(函数)是可以循环找this（有多少个input就循环多少次）这个必须循环因为每个文本框的msg不一样
-          if($(this).val()=="")					//.val()是可以添加文本框的值，也可获取
-          {
-               num++;
-               str+=$(this).attr("msg")+"不能为空！\r\n";//.attr()是返回指定属性的值
+	  $(".formInput").each(function(n){	//.each(函数)是可以循环找this（有多少个input就循环多少次）这个必须循环因为每个文本框的msg不一样
+          if($(this).val()==""){				//.val()是可以添加文本框的值，也可获取
+            num++;
+			$(this)[0].style.borderColor="red";
+            $(this).nextAll(".input-tip").attr("style","display:inline-block");   	//让后面所有的span都显示
           }
       });
      if(num>0){
-          $('span')[0].style.display="block";
-          $('span')[0].innerHTML=str;
           return false;//对jquery函数有效，此处无效
    		 }
      else{
           return true;//对jquery函数有效
 		}
-    
    }
 	function Tru(){
-		let psdOne=$("#t2").val();
-		let psdTwo=$("#t3").val();
+		let psdOne=$("#t3").val();
+		let psdTwo=$("#t4").val();
 		if(psdOne==psdTwo){
 			return true;
 		}else{
 			return false;
 		}
 	}
-	var ret2=null;
-	$("#t1").change(function(){
-			ret2=blu();
-			$('span')[0].style.display="none";
-			console.log(ret2)
-	});
-	$("#t2").keyup(function(){
-			$('span')[0].style.display="none";
-			if($(this).val()!==""){	
-				$(".panduan1").html("√")		//后期正则验证
-			}
-			
-	})
-	$("#t3").blur(function(){
-		$('span')[0].style.display="none";
-		let ret4=Tru();
-		if(ret4&&($("#t3").val()!=="")){
-			$(".panduan2")[0].style.color="#333";
-			$(".panduan2").html("√")
-		}else if(!ret4){
-			$(".panduan2")[0].style.color="red";
-			$(".panduan2").html("密码不一致")
+	
+	$("#t1").focus(function(){										//T1得到焦点
+		$(this)[0].style.borderColor="#2bb8aa";
+		$(".input-tip")[0].style.display="none";					//请输入提示消失
+		$(".input-tip")[0].lastElementChild.style.display="none";	//t1焦点一获取就让“直接登录”消失
+		$('.inline-tip')[0].style.display="none";					//焦点获取时美团通用消失
+	})	
+	
+	$("#t1").blur(function(){										//t1失去焦点
+			$(this)[0].style.borderColor="#aaa";
+		 if($(this).val()==""){
+		 	$(this)[0].style.borderColor="red";
+			$(".input-tip")[0].style.display="inline-block";
+			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".input-tip").children(".changeText1").html("请输入您的手机号码");
+		}else{
+			$(".input-tip")[0].style.display="inline-block";
+			$(".checkingImg").attr("src","../img/login/checking.png")
+			$(".input-tip").children(".changeText1").html("检查中...");
+			blu();
 		}
-			
-				
-			
+	});
+	var ret1=null;
+	$(".formInput").not("#t1").each(function(){
+		$(this).focus(function(){
+			$(this)[0].style.borderColor="#2bb8aa";
+			$(this).nextAll("span")[0].style.display="none";
+		})
+		$(this).blur(function(){
+			$(this)[0].style.borderColor="#aaa";
+			if($(this).val()==""){
+				$(this).nextAll("span")[0].style.display="inline-block";
+				$(this)[0].style.borderColor="red";
+			}
+			else if($(this).attr("id")=="t4"){
+				ret1=Tru();
+				if(!ret1){
+					$(this).nextAll("span")[0].style.display="inline-block";
+					$(this).nextAll("span").children("img").attr("src","../img/login/cuo.png")
+					$(this).nextAll("span").children("span").html("两次输入的密码不一致，请重新输入")
+					$(this)[0].style.borderColor="red";
+				}else{
+					$(this).nextAll("span")[0].style.display="inline-block";
+					$(this).nextAll("span").children("img").attr("src","../img/login/dui.png")
+					$(this).nextAll("span").children("span").html("");
+				}
+			}					
+		})
 	})
 	
 	var eve=event||window.event
 	$("form").submit(function(eve){
-			 if(!eve.isDefaultPrevented()){	//	!!!一定要组织表单默认提交 type = 'button'或者event.preDefault(),不然点击按钮会立马刷新;而且用户名和密码会显示在地址栏上
+		if(!eve.isDefaultPrevented()){	//	!!!一定要组织表单默认提交 type = 'button'或者event.preDefault(),不然点击按钮会立马刷新;而且用户名和密码会显示在地址栏上
                 eve.preventDefault();
-            }
-		let ret1=inpFunc();					//input不为空
-		let ret3=Tru();
-		if(ret1&&ret2=="ok"&&ret3){
+          }
+		let ret2=inpFunc();
+		if(ret1&&ret2&&result=="ok"){
 			$.ajax({							//接口
 			   type:"POST",
 			   url:"../php/save.php",			//地址
@@ -133,35 +219,14 @@ $(function(){
 					//console.log(document.referrer).
 				}else{
 					alert('服务器错误');
-						}				
-					}
+					}				
+				}
 			});
-		}else if($('input')[0].value==""){
-			  $('span')[0].innerHTML="用户名不能为空！"	//用来整理提示顺序	
-			}else if($('#t2').val()==""){
-			  $('span')[0].innerHTML="密码不能为空！"
-			}else if(!ret3){
-				$('span')[0].style.display="none";
-				$(".panduan2").html("密码不一致")
-			}
-
-		});
-				
+		}
+	});		
 		
+})
 		
-		
-		
-		
-	})
-	
-	
-	function setCookie(c_name,value,expiredays){
-		var et=new Date();
-		et.setDate(et.getDate()+expiredays)
-		document.cookie=c_name+"="+escape(value)+(expiredays==null ? "" : ";expire="+et.toGMTstring()+";path="+"/";
-		
-	}
-	
 	
 	
 	
