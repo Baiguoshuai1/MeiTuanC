@@ -187,21 +187,69 @@ $(function(){
 					$(this).nextAll("span").children("span").html("两次输入的密码不一致，请重新输入")
 					$(this)[0].style.borderColor="red";
 				}else{
-					$(this).nextAll("span")[0].style.display="inline-block";
+		 			$(this).nextAll("span")[0].style.display="inline-block";
 					$(this).nextAll("span").children("img").attr("src","../img/login/dui.png")
 					$(this).nextAll("span").children("span").html("");
 				}
 			}					
 		})
 	})
+	var psdLength=null;
+	$("#t3").blur(function(){
+		if($(this).val().length<6){
+			$(this).nextAll("span")[0].style.display="inline-block";
+			$(this).nextAll("span").children("img").attr("src","../img/login/cuo.png")
+			$(this).nextAll("span").children("span").html("密码长度太短，至少6个字符")
+			$(this)[0].style.borderColor="red";
+			psdLength=false;
+		}else{
+			$(this).nextAll("span")[0].style.display="inline-block";
+			$(this).nextAll("span").children("img").attr("src","../img/login/dui.png")
+			$(this).nextAll("span").children("span").html("");
+			psdLength=true;
+		}
+	})
 	
+	$("#t3").keyup(function(){
+			let ret1=/(^[1-9]{0,6}$)|(^[a-zA-Z]{0,6}$)/
+			let ret2=/^\w{7,10}$/
+			let ret3=/^[a-zA-Z0-9]{11,}$/
+			let str=$("#t3").val()
+		if($(this).val()==""){
+			$(".strength-colorBox").css({
+				width:0,backgroundColor:"#eee"
+			})
+		}
+	
+		$(".strength-colorBox").css({
+			width:function(){
+				if(ret1.test(str)&&$("#t3").val()!==""){
+					return 85;
+				}else if(ret2.test(str)&&$("#t3").val()!==""){
+					return 174;
+				}else if(ret3.test(str)&&$("#t3").val()!==""){
+					return 260;
+				}
+			},
+			backgroundColor:function(){
+				if($(this)[0].style.width=="85px"){
+					return "#f76120";
+				}else if($(this)[0].style.width=="174px"){
+					return "#ff8900";
+				}else if($(this)[0].style.width=="260px"){
+					return "#5bab3c";
+				}
+			}
+		})
+
+	})
 	var eve=event||window.event
 	$("form").submit(function(eve){
 		if(!eve.isDefaultPrevented()){	//	!!!一定要组织表单默认提交 type = 'button'或者event.preDefault(),不然点击按钮会立马刷新;而且用户名和密码会显示在地址栏上
                 eve.preventDefault();
           }
 		let ret2=inpFunc();
-		if(ret1&&ret2&&result=="ok"){
+		if(ret1&&ret2&&result=="ok"&&psdLength){
 			$.ajax({							//接口
 			   type:"POST",
 			   url:"../php/save.php",			//地址
