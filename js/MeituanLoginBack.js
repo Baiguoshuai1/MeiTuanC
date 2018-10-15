@@ -11,6 +11,7 @@ var strCookieN="";
 	  		var date=new Date(); 
 	  		date.setTime(date.getTime()-10000); 
 	 		document.cookie=strCookieN+"=s; expires="+date.toGMTString()+";path="+"/";//如果给cookie设置了path，删除也要设置同样的格式
+	 		//document.cookie=strCookieN+"=s; expires="+date.toGMTString();
 		//$.removeCookie(strCookieN)	//不兼容IE
 			console.log(strCookieN)
 		}

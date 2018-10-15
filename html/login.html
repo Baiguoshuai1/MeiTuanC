@@ -26,14 +26,14 @@
 						</div>
 						<div class="elem">
 							<i class="iconfont">&#xe8da;</i>
-							<input types="text" id="t1" name="username" placeholder="手机号/用户名/邮箱"/>
+							<input types="text" id="t1" name="username" placeholder="手机号/用户名/邮箱" msg="账号"/>
 						</div>
 						<div class=" elem psd">
 							<i class="iconfont">&#xe648;</i>
-							<input types="text" id="t2" name="userpass" placeholder="密码"/>
+							<input types="text" id="t2" name="userpass" placeholder="密码" msg="密码"/>
 						</div>
 						<div class="elem form-check">
-							<input type="text" placeholder="验证码"/>
+							<input class="userYanzheng" type="text" placeholder="验证码" msg="验证码"/>
 							<img height="36" width="72" class="yanzhengImg" src="../img/login/captcha (1).jpg"/>
 							<span class="yanzheng-text">看不清楚？换一张</span>
 						</div>
@@ -88,36 +88,83 @@
  <script language="JavaScript">
  	$(function(){
  		var checkCount=0;
- 		var checkNumber=parseInt(Math.random()*20)
+ 		var checkNumber=null;               
    		function radomCheckIMg(){		//生成随机验证码图片
-	 		$(".yanzhengImg").attr("src",function(){	//每次打开网页生成不同的验证码图片
-	 			return "../img/login/captcha ("+parseInt(Math.random()*20)+").jpg";	//函数里面的图片号码不能再使用变量，得直接使用随机数
+	 		$(".yanzhengImg").attr("src",function(){	
+	 			checkNumber=parseInt(Math.random()*20);
+	 			return "../img/login/captcha ("+checkNumber+").jpg";	//函数里面的图片号码不能再使用变量，得直接使用随机数
 	 		})
    		}
 	
  		$(".yanzhengImg").attr("src",function(){	//每次打开网页生成不同的验证码图片
- 			return "../img/login/captcha ("+checkNumber+").jpg";
+				radomCheckIMg();
  		})
- 		$(".yanzheng-text").click(function(){		//点击换验证码图片
- 			radomCheckIMg();
+ 		
+ 		$(".yanzheng-text").click(function(){		//点击文字换验证码图片
+				radomCheckIMg();
  		})
- 		$(".yanzhengImg").click(function(){		//点击换验证码图片
- 			radomCheckIMg();
+ 		$(".yanzhengImg").click(function(){		//点击图片换验证码图片
+ 				radomCheckIMg();
  		})
+ 		
  		function setCookie(c_name,value,expiredays){		//存储cookies
 			var exdate=new Date()
 			exdate.setDate(exdate.getDate()+expiredays)
 			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
-		}	
+		}
+ 		function checkYan(){
+			let Num=["o4W","G78d","Z8UF","BHAe","3CDY","RK7A","HA85","ET9E","XDdu","DL6e","WZFZ","Gpao",
+					"aZCA","ZX6S","PDYh","Bd5T","MZFC","S2B7","UZVm","VKVX"]
+			for(let i=0;i<Num.length;i++){
+			if($(".userYanzheng").val()==Num[i]&&checkNumber==i){
+					return true;
+				}else{
+					continue;
+				}
+			}
+		}
+		function inpFunc(){					//验证input不为空
+		     let num=0;
+		     let str="";
+			  $("input").not(".userYanzheng").each(function(n){	//.each(函数)是可以循环找this（有多少个input就循环多少次）这个必须循环因为每个文本框的msg不一样
+		          if($(this).val()=="")					//.val()是可以添加文本框的值，也可获取
+		          {
+		               num++;
+		               str="请输入"+$(this).attr("msg");//.attr()是返回指定属性的值
+		          }
+		      });
+		     if(num>0){
+ 				$(".validate")[0].style.visibility="visible";
+ 				$(".prompt").html(str)
+		          return false;//对jquery函数有效，此处无效
+		   		 }
+		     else{
+		          return true;//对jquery函数有效
+				}
+    
+ 	  }
  		var eve=event||window.event;
  		$("#form2").submit(function(eve){
  			if(!eve.isDefaultPrevented()){
  				eve.preventDefault();
  			}
- 			if(checkCount>2){
+ 			if(checkCount>=2){
  				$(".form-check")[0].style.display="block";
+ 				$(".userYanzheng")[0].focus();
+ 				$(".userYanzheng")[0].style.borderColor="#2bb8aa";
+ 				if($(".userYanzheng").val()==""){
+ 					$(".userYanzheng").blur(function(){
+ 						$(this)[0].style.borderColor="red";
+ 					})
+ 				}
+ 				$(".userYanzheng").keyup(function(){
+ 					$(this)[0].style.borderColor="#2bb8aa";
+ 				})
+ 				
  			}
- 			//if(checkCount>2&&验证码正确||){
+ 			let ret1=checkYan();
+ 			let ret2=inpFunc();
+ 			if(checkCount>=2&&ret1&&ret2&&($(".userYanzheng").val()!=="")||ret2&&checkCount<2){
  				$.ajax({
  				type:"POST",
  				url:"../php/loginCheck.php",
@@ -127,22 +174,34 @@
  						if($("#autologin:eq(0)").is(":checked")){
  							$.cookie($('#t1').val(),$('#t2').val(),{expires:7,path:"/"})
  						}else{
- 							$.cookie($('#t1').val(),$('#t2').val())
+ 							$.cookie($('#t1').val(),$('#t2').val(),{path:"/"})
  						}
+ 						$(".validate")[0].style.visibility="hidden";
  						location.href="MeiTuanLoginBack.html";
  						console.log(document.cookie)
  					}else{
  						checkCount++;
  						$(".validate")[0].style.visibility="visible";
  						$(".prompt").html("账号或密码错误，请重新输入")
+ 						$(".userYanzheng").val("");
+ 						//if($(".form-check")[0].style.display=="block"){
+ 							radomCheckIMg();
+ 							//}
  						}
  					}
  				})
-// 			}else if($('#t1').val()==""){
-//				 $(".prompt").html("用户名不能为空")	//用来整理提示顺序	
-//			}else if($('#t2').val()==""){
-//			  $(".prompt").html("密码不能为空")
-//			}
+   			}else if($('#t1').val()==""){
+				 $(".prompt").html("请输入用户名")	//用来整理提示顺序	
+			}else if($('#t2').val()==""){
+			  $(".prompt").html("请输入密码")
+			}else if(checkCount>=2&&$(".userYanzheng").val()==""){
+				$(".prompt").html("请输入验证码")
+			}else if(!ret1){
+				$(".validate")[0].style.visibility="visible";
+ 				$(".prompt").html("验证码输入错误")	
+ 				$(".userYanzheng").val("");
+ 				radomCheckIMg();
+			}
  		})
  			
  			 			
@@ -169,7 +228,7 @@
 			}
 			console.log($("#autologin:eq(0)").is("checked"))
 		})
-//		$(".normal")..blur(function(){
+//		$(".normal").blur(function(){
 //			
 //		})
  	})
