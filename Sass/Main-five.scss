@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*----------------------------------------.five-----------------------------*/
+.five-contain{
+    .five-contain-navBox{
+             background: linear-gradient(to right, rgb(243, 182, 74) 2%, rgb(242, 197, 69) 97%) rgb(243, 182, 74);
+    }
+    .five-contain-nextBox{
+        .title-sub>span{
+        border:none;
+                }
+        .price{
+            .money-ico{color:#F60}
+            .money-numer{color:#F60}
+         }
+        a .imgBox{
+           position: relative;
+          .photo{position:absolute;width:52px;height:52px;border-radius: 50%;right:20px;bottom:-22px} 
+        }
+    }  
+}

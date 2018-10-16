@@ -1,0 +1,276 @@
+@charset "utf-8";
+header{
+        .header-content{
+            padding:0;
+           .header-content-logoBox{ 
+             float: left; padding:28px 60px 40px 0; font-size: 16px;min-width: 220px; height: 54px; box-sizing: content-box;
+            .header-content-logoBox-aBox{
+            position: relative;width:260px;
+            span{
+                position: absolute;color:#222;margin-left: 10px;bottom:12px;
+                }
+            .header-CaiD{
+                float: right; background: #fff;
+                position: relative;padding: 3px 13px 3px 4px;cursor: pointer;
+                display: inline-block;
+                color: #999;
+                top:16px;
+                font-size: 12px;
+                margin-left: 14px;
+                border: 1px solid #e5e5e5;
+                border-radius: 4px;
+                    }     
+            }
+            }
+        }
+    }
+main{
+    .content{
+        width: 1190px;margin: auto;color:#222;
+        .bread{
+                font-size: 12px; color: #222; line-height: 17px;padding: 19px 0;
+             span{
+                 a{color: #222;}
+             }
+        }
+        .cake-style{
+            font-size: 12px;color: #666; background-color: #fff; border-radius: 10px;padding: 20px 20px 33px;
+            border: 1px solid #e5e5e5;box-shadow: 0 5px 14px 0 rgba(0,0,0,.1);overflow: hidden;
+          .cake-style-left{
+              float: left;width: 748px; padding-right: 20px;
+              .left-name{
+                   font-size: 26px;line-height: 37px;height:37px;
+                   .SS{float: left;}
+                   .shiping{
+                       float: right; float: right;color: #00c9b3;font-size: 12px;cursor: pointer;
+                       img{width:15px;height:18px;vertical-align: middle;position: relative;top:-2px;margin-right: 2px;}
+                   }
+              }
+              .left-score{
+                      font-size: 14px;height: 14px; margin: 6px 0 17px;
+                      .score-star{
+                          display: inline-block;    width: 84px; height: 24px; position: relative;
+                          img{height:13px}
+                      }
+                      p{
+                          display: inline-block;
+                          span{margin-left: 10px;}
+                      }
+              }
+              .left-address{
+                      border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;padding: 16px 0 11px;
+                      p{
+                        font-size: 14px;line-height: 20px;margin-bottom: 10px;
+                        b{
+                            background-image:url(../img/cake/16pt.png);
+                            width: 14px; height: 14px;background-position-x: -28px;
+                            background-size: auto 14px;
+                            display: inline-block;
+                            margin-left: 6px;
+                            vertical-align: middle;
+                            margin-top: -3px;
+                            cursor: pointer;
+                         }
+                    }
+              }
+             .left-tags{
+                     padding-top: 20px;
+                     li{
+                        float: left;
+                        margin-right: 16px;
+                        line-height: 17px;
+                        img{
+                            margin: auto auto 11px;
+                            width: 24px;
+                            height: 23px;
+                            border-radius: 0;
+                            display: block;
+                          }
+                     }
+                }  
+          }
+                .cake-style-right{
+                 float: left; width: 380px; overflow: hidden; cursor: pointer;
+                 .big{
+                         height: 214px; width: 100%;
+                         img{
+                             width: 100%;height: 100%;display: block;border-radius: 4px;
+                         }
+                    }
+                   ul{
+                        width: 385px;padding-top: 10px;
+                       li{
+                           float: left;width: 92px;margin-right: 4px; height:60px;
+                           img{ 
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 4px;    
+                            }  
+                       }
+                   }
+                }
+            }
+            .cake-buy{
+                color: #222;padding-top: 40px;
+                .buy-left{
+                    width: 950px;float: left;
+                    h3{    font-size: 20px;
+                            line-height: 26px;
+                            margin-bottom: 8px;
+                     }
+                    .shop-listBox{
+                            margin-bottom: 10px;background: #fff;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 4px;
+                            padding: 16px 20px 20px;
+                            overflow: hidden;
+                            h4{
+                                font-size: 16px;
+                                line-height: 26px;
+                            }
+                            .one-clear{
+                                 padding-bottom: 20px;
+                                 margin-top: 17px;overflow: hidden;
+                                 border-bottom: 1px solid #ddd;
+                                 .pic{
+                                        width: 100px;
+                                        height: 100px;
+                                        float: left;
+                                        cursor: pointer;
+                                        img{
+                                                display: block;
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 4px;
+                                        }
+                                 }
+                                 .pic-right{
+                                    float: left;
+                                    padding: 1px 0 0 20px;
+                                    width: 788px;
+                                    a{
+                                        width: 120px;
+                                        height: 40px;
+                                        font-size: 14px;
+                                        background-color: #f90;
+                                        text-align: center;
+                                        line-height: 40px;
+                                        color: #fff;
+                                        float: right;  
+                                        display: inline-block;
+                                        margin-top: 30px;
+                                        border-radius: 100px;
+                                    }
+                                    .name{
+                                        font-size: 16px;
+                                        line-height: 22px;
+                                        cursor: pointer;margin:0;
+                                        span{
+                                            vertical-align: middle;
+                                        }
+                                        b{  display: inline-block;
+                                            background-image: url(../img/cake/16pt.png);
+                                            background-position-x:-48px;
+                                            background-size: auto 16px;
+                                            height: 16px;
+                                            width: 16px;
+                                            vertical-align: middle;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                    .sale{
+                                            font-size: 12px;
+                                            color: #666;
+                                            line-height: 17px;
+                                            margin: 1px 0 22px;
+                                            cursor: pointer
+                                    }
+                                    .price{
+                                        font-size: 30px;
+                                        color: #f60;
+                                        cursor: pointer;
+                                        margin: 0;
+                                        b{font-weight: 400;font-size: 14px;}
+                                        span{
+                                            color: #999;
+                                            font-size: 12px;
+                                            margin-left: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .DaiJinQuan{
+                            margin-bottom: 40px;
+                            background: #fff;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 4px;
+                            padding: 20px;
+                            overflow: hidden;
+                            a{color: #222;}
+                            h4{
+                                font-size: 16px;
+                                line-height: 26px;
+                            }
+                            .one-clear{
+                                padding-bottom: 20px;
+                                margin-top: 17px;
+                                overflow: hidden;
+                                .price{
+                                    float: left;
+                                    width: 140px;
+                                    height: 89px;
+                                    //background-image: url(/bs/file/?f=meishi.web:assets/74f33f3125908576.png@ca55222);
+                                    background-color:#eee ;
+                                    border-top-left-radius:8px;
+                                    border-bottom-left-radius:8px;
+                                    background-size: 100% 100%;
+                                    text-align: center;
+                                    padding: 11px 10px 0;
+                                    color: #333;
+                                    font-size: 14px;
+                                    span{
+                                        display: block;
+                                        font-size: 30px;
+                                        color: #f60;
+                                        border-bottom: 1px dashed #ccc;
+                                        line-height: 36px;
+                                        margin-bottom: 9px;
+                                        padding-bottom: 8px;
+                                        b{
+                                            font-weight: 400;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                .name{
+                                    float: left;
+                                    width: 728px;
+                                    padding-left: 20px;
+                                    font-size: 12px;
+                                    .buybuybuy{
+                                        width: 120px;
+                                        height: 40px;
+                                        font-size: 14px;
+                                        background-color: #f90;
+                                        text-align: center;
+                                        line-height: 40px;
+                                        color: #fff;
+                                        float: right;
+                                        display: inline-block;
+                                        margin-top: 30px;
+                                        border-radius: 100px;
+                                    }
+                                    p{
+                                        font-size: 16px;
+                                        line-height: 22px;
+                                        margin-bottom: 1px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }

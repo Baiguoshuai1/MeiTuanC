@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*----------------------------------------.six-----------------------------*/
+.six{
+    .six-contain-navBox{
+        background-image: linear-gradient(-90deg,#0ECAC7 0,#06C1AE 100%);border:1px solid #ddd;border-bottom: 0;
+    }
+    .six-contain-city{
+        width:100%;height:227px;border:1px solid #ddd;box-sizing: border-box;
+       .hotRow:first-child{margin-top: 8px;}
+       .hotRow{ 
+            width:100%;height:auto;overflow: hidden;float: left;
+           .hotRow-subtitle{
+            width:98px;float: left;font-size: 14px;font-weight: 500;color:#222;padding:10px 0;text-align: center;
+           }
+           .hotRow-sublist{
+               width:1090px;float: left;padding-top: 12px;overflow: hidden;border-bottom: 1px solid #E5E5E5;
+               dd{
+                   width:100px;float: left;height:17px;margin-bottom: 13px;
+                   a{
+                       display:block;width:80px;color:#666;text-overflow: ellipsis;
+                   }
+                   a:hover{color: #31BBAC;}
+               }
+           }
+           .lastList{border:0}
+        }
+    }
+}

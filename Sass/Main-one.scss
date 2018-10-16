@@ -1,0 +1,75 @@
+@charset "utf-8";
+/*---------------------------------------------------main-----------------------------------------------------------*/
+/*---------------------------------.one---------------------------------------*/
+.left-banner{float:left}
+.left-banner-container{width:230px;height:460px;position:relative;float:left;margin-top:-50px;color:#fff;
+        padding-top:15px;background: linear-gradient(#28c0ac,#38a2c1);}
+.left-banner-container a{color:#fff}
+.left-banner-container-menu{font-size: 16px;padding-left:15px;height:30px;}
+.left-banner-container-lie{color:#fff;font-size:13px;padding-top:14px;}
+.left-banner-container-lie ul{padding-bottom: 0px;}
+.left-banner-container-lie ul li{padding:2px 12px;height:25.5px;text-align: left;box-sizing: border-box;}
+.left-banner-container-lie ul li i:first-child{font-size: 17px;color:#68cfc5;padding-right: 4px;}
+.left-banner-container-lie ul li a+i{font-size: 6px;color:#fff;font-weight: 600;float: right;padding:6px 0;padding-left:43px}
+.left-banner-container-content{display: block;position: absolute;left:230px;top:60px;z-index: 3;background-color:#fff;
+    color: #000;width:400px;height:415px;}
+.left-banner-container-contentBox1{margin:0 30px;text-align: left;margin-top: 24px;padding-bottom: 10px;height:22px;
+    line-height: 22px;border-bottom: 1px solid #ddd;}
+.left-banner-container-content a:first-child{font-size:16px;font-weight: 500;color:#222;float: left;}
+.left-banner-container-content h2~a{color:#999;font-weight: 400;font-size: 12px;}
+
+.right-banner{float:left;position: relative;}
+.right-banner-header-nav{position:absolute;left:30px;top:-35px;white-space:nowrap;}
+.right-banner-header-nav a{color:#222;font-size:16px;white-space:nowrap;margin:0 20px;font-weight: 700;}
+.right-banner-rowBox{overflow: hidden;box-sizing: border-box;}
+.slider-imgBox{width:550px;height:240px;margin:10px;position:relative;}
+.slider-imgBox .iOne{left:12px;top:101px}
+.slider-imgBox .iTwo{right:12px;top:101px}
+.slider-imgBox div i{color:#fff;font-size:19px;font-weight:800;margin: auto;}
+.right-banner-rowBox .ktv{height:240px;margin-top:10px;margin-right: 10px;overflow: hidden}
+.right-banner-rowBox .ktv .topImg{width:150px;height:100%}
+.right-banner-rowBox .login{
+    float:left;width:228px;height:210px;color: #222;background-color:#fff;font-weight: 500;border: 1px solid #ddd;padding-top:30px;
+    margin-top:10px;text-align: center;font-size: 16px;
+    p{
+        margin: 2px 66px;height: 30px;text-overflow: ellipsis;position: relative;overflow: hidden;text-align: center;
+        .username{
+            padding:0;font-size: 16px; color: #222;font-weight: 500;
+            white-space: nowrap; width: 6em; margin: 0 auto;//margin-left:25px;
+        }
+        i{color:#31BBAC;;font-size: 20px;line-height:1.3}       
+     }
+        .LoginregisteA{
+            display:block;transition:background-color .5s;text-align:center;width: 118px;font-size: 14px;
+            line-height: 35px;color: #333;
+            border: 1px solid #e5e5e5;border-radius: 40px;margin:10px auto;margin-bottom:18px;
+                    }
+        .LoginregisteA:hover{
+            background-color: #eee;        
+        }
+    .loginBox-row{
+        padding:0 15px;position: relative; height: 48px;margin-top: 2px;
+        .fn-item{
+            width:33.3%;float: left;overflow: hidden;height:48px;
+            i{font-size: 20px;color: #31BBAC;}
+            p{font-size: 12px; color: #222;margin: 5px 0;}
+        }
+    }
+ }
+.right-banner-rowBox .login img{width:47px;border-radius: 50%;border: 4px solid #E5E5E5;margin-bottom:4px;}
+.right-banner-rowTwoBox{box-sizing: border-box;}
+.right-banner-rowTwoBox img{display:block;width:270px;margin-left:10px;height:165px}
+.right-banner-rowTwoBox .floorImg{width:150px;}
+.codeBigBox{width:228px;height:151px;background-color: #fff;border:1px solid #ddd;margin-left:10px;text-align: center;}
+.right-banner-rowTwoBox .codeBigBox{padding-top: 12px;}
+.right-banner-rowTwoBox .codeBigBox img{width:95px;height:95px;margin:auto}
+.codeBigBox .app-name{font-size:16px;color:rgb(34,34,34)}
+.codeBigBox .app-nameFloor{margin-top:4px}
+.codeBigBox .app-floorP1{color:rgb(236,83,48);font-size:12px;}
+.codeBigBox .app-floorP2{color:rgb(63,63,63);font-size:12px;}
+
+.hover1{background-color:#57c3c2;color:#fff}        //修复刷新的时候鼠标在该元素上的bug
+.hover2{color:#fff!important}
+.right-banner-header-nav0{color:#fbc700!important}         //导航字体的三种颜色（随机选）
+.right-banner-header-nav1{color:#ed1e24!important}
+.right-banner-header-nav2{color:#13d1be!important}

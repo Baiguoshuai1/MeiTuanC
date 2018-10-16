@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*---------------------------------.four---------------------------------------*/
+.four-contain-navBox{background: linear-gradient(to right, rgb(250, 60, 104) 2%, rgb(254, 70, 77) 97%) rgb(250, 60, 104);}
+.four-contain-navBox .right-li{float: right;}
+.four-sliderBox{position:relative;overflow:hidden;height:338px;padding:20px 10px;border: 1px solid #ddd;
+                border-top:none;box-sizing: border-box;}
+.four-sliderBox-pointerBox{position:absolute;display:flex;z-index:2;width:38px;height:38px;top:150px;background-color:#444;
+                        border-radius:50%;opacity: .8;cursor: pointer;}
+.four-sliderBox-pointerBox i{color:#fff;font-size:19px;font-weight:800;margin: auto;}
+.four-sliderBox-ulBox{width:100%;height:297px;position: relative;margin-left: 11px;}
+.four-sliderBox ul{display:block;height:297px;position: absolute;}
+
+.four-sliderBox .movieUlTwo{right:-1165px}
+.four-sliderBox ul li{
+        position:relative;float: left;margin-right:19px;display: block;
+        .lifooter{
+            width:100%;height:100px;position: absolute;color:#CCC;bottom:-45px;box-sizing: border-box;padding: 0 10px;
+            cursor: pointer;
+            b span{color:#FD9827;font-size:16px;font-weight: 500;margin-left: 3px;}    
+            b .xianhou{margin-right: 3px;margin-left: 0;}
+            .film-name{text-overflow: ellipsis;font-size: 16px;}
+            .buy-title{background: #FF4949;border-radius: 100px;  font-size: 14px;cursor: pointer;
+                        line-height: 25px;position: absolute;right: 10px;bottom:55px;
+                        text-align: center;color:#fff;
+                        float: right;
+                        width:52px;
+                        height:25px;
+            }
+        }
+     }
+.four-sliderBox ul li a{display: block;width:214px;height:297px}
+.four-sliderBox ul li a img{width:100%;height:100%;border-radius:4px;}
