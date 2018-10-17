@@ -162,6 +162,10 @@
  				})
  				
  			}
+ 	var localCookie=document.cookie;
+	var cookieValue=localCookie.split(";")[localCookie.split(";").length-1].split("=") [1];	//最后一个键值对的值
+	var cookieNameNum=localCookie.split(";")
+
  			let ret1=checkYan();
  			let ret2=inpFunc();
  			if(checkCount>=2&&ret1&&ret2&&($(".userYanzheng").val()!=="")||ret2&&checkCount<2){
@@ -172,13 +176,16 @@
  				success:function(mes){
  					if(mes==($("#t1").val())){
  						if($("#autologin:eq(0)").is(":checked")){
- 							$.cookie($('#t1').val(),$('#t2').val(),{expires:7,path:"/"})
+ 							$.cookie("username",$('#t1').val(),{expires:7,path:"/"})
  						}else{
- 							$.cookie($('#t1').val(),$('#t2').val(),{path:"/"})
+ 							$.cookie("username",$('#t1').val(),{path:"/"})
  						}
  						$(".validate")[0].style.visibility="hidden";
- 						location.href="MeiTuanLoginBack.html";
- 						console.log(document.cookie)
+ 						if(cookieValue=="MeiTuanLoginBack.html"){
+ 							location.href="MeiTuanLoginBack.html";
+ 						}else if(cookieValue=="misscake.html"){
+ 							location.href="misscake.html"
+ 						}
  					}else{
  						checkCount++;
  						$(".validate")[0].style.visibility="visible";

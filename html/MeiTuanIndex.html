@@ -23,7 +23,8 @@ summary 在details中   摘要 ul-nav-firstHover
 		<link rel="stylesheet" href="../css/Main-five.css">
 		<link rel="stylesheet" href="../css/Main-six.css">
 		<link rel="stylesheet" href="../css/footer.css">
-		<script language="JavaScript">(function(){if(document.cookie!=""||document.cookie.length>0){location.href="MeiTuanLoginBack.html"}})()</script>
+	<script language="JavaScript">(function(){var cookieKey=document.cookie.split(";")[document.cookie.split(";").length-1].split("=")[0];
+	console.log(cookieKey);if(cookieKey==" username"||cookieKey=="username"){location.href="MeiTuanLoginBack.html"}})()</script>	<!--键值对之间默认空格隔开-->
 	</head>
 	<body>
 <!--===============================header========================================-->	
@@ -1022,8 +1023,10 @@ summary 在details中   摘要 ul-nav-firstHover
 	</body>
 </html>
 <script language="JavaScript" src="../js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../js/header.js" ></script>
 <script type="text/javascript" src="../js/slider.js" ></script>
-<script type="text/javascript" src="../js/indexPublic.js" ></script>
+<script type="text/javascript" src="../js/index-main.js" ></script>
 
 
 

@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{
-   background:#f1f1f1;  
+   background:#f6f6f6;  
    
 }
 /*---------------------------------------------------header-----------------------------------------------------------*/
@@ -18,7 +18,8 @@ header a:hover{color:#28c0ac}
 .header-bar-position .a-login{padding-left: 20px;padding-right: 8px;}
 .header-bar-nav .ul-nav>li{float: left;padding:14px 15px}
 /*.header-bar-nav .ul-nav .spec{margin:0;border:none!important}*/
-.ul-nav-liOne .ul-nav-first{padding:0 15px;padding-top:10px;margin-left:-16px}
+.ul-nav-liOne .ul-nav-first{padding:0 15px;padding-top:10px;margin-left:-16px;background-color: #fff;
+    box-shadow: 0 5px 14px 1px rgba(0,0,0,.1);}
 .ul-nav-liOne .ul-nav-first li{line-height:2.8;}
 
 .header-content{background:white;padding-bottom: 45px;}
@@ -32,4 +33,4 @@ header a:hover{color:#28c0ac}
 .header-content-searchBox-hotwordBox a{padding-right:5px}
 
 .ul-nav-liOneHover{border-left: 1px solid #ddd;border-right:1px solid #ddd;margin:0 -1px;background-color: #fff;}
-.ul-nav-firstHover{border: 1px solid #ddd;border-top:none;display: block!important}//显示右上角导航的子菜单
+.ul-nav-firstHover{border: 1px solid #ddd;border-top:none;background-color: #fff;display: block!important}//显示右上角导航的子菜单

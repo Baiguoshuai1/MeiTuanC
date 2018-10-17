@@ -3,7 +3,320 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/misscake-header.css">
+		<link rel="stylesheet" href="../css/shopcar.css">
+		<link rel="stylesheet" href="../css/footer.css" />
 	</head>
 	<body>
+<!--===============================header========================================-->	
+			<header value="我是header">
+				<div class="w header-bar">
+					<div class="l header-bar-position">
+						<i class="iconfont">&#xe61f;</i>
+						<span >西安</span>
+						<a href="" class="a-city">切换城市</a>
+						<span style="color:#9fa09f">
+							[
+						<a href="">咸阳</a>&nbsp;
+						<a href="">高陵</a>&nbsp;
+						<a href="">临潼</a>
+						]</span>
+						<span class="change">
+							<a href="d" class="username"></a>
+							<a class="exit" style="cursor: pointer;">退出</a>
+							<a href="login.html" style="color:#28BFAC;display: none;" class="a-login publoginbtn">立即登录</a>
+							<a href="registe.html" style="display: none;" class="registe">注册</a>
+						</span>
+					</div>
+					<div class="r header-bar-nav">
+						<ul class="ul-nav">
+							<li class="ul-nav-liOne">
+								<a href="">我的美团</a>
+								<ul class="ul-nav-first" style="display: none;position:absolute;">
+									<li><a href="">我的订单</a></li>
+									<li><a href="">我的收藏</a></li>
+									<li><a href="">抵用券</a></li>
+									<li><a href="">账户设置</a></li>
+								</ul>
+							</li>
+							<li class="spec"><a href="">手机APP</a></li>
+							<li>
+								<a href="">商家中心</a>
+								<ul class="ul-nav-second" style="display: none;position:absolute;">
+									<li><a href="">登录商家中心</a></li>
+									<li><a href="">美团智能收银</a></li>
+									<li><a href="">登录商家中心</a></li>
+									<li><a href="">登录商家中心</a></li>
+									<li><a href="">登录商家中心</a></li>
+									<li><a href="">登录商家中心</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">网站导航</a>
+								<div class="ul-nav-three" style="display: none;position:absolute;">
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-content">
+					<div class="w" style="display: flex;">
+						<div class="header-content-logoBox">
+							<div class="header-content-logoBox-aBox">
+							<a href="MeiTuanIndex.html">
+								<img src="../img/logo.png" style="width:126px;">
+							</a>
+							<span> · 美食</span>
+							<ul class="header-CaiD">
+								<li class="header-CaiD-all">全部分类</li>
+								<nav class="header-CaiD-list" style="display:none;">
+									<li class="clearfix"><a href="">美食</a></li>
+									<li class="clearfix"><a href="">外卖</a></li>
+									<li class="clearfix"><a href="">酒店</a></li>
+									<li class="clearfix"><a href="">名宿</a></li>
+									<li class="clearfix"><a href="">猫眼电影</a></li>
+									<li class="clearfix"><a href="">机票/火车票</a></li>
+									<li class="clearfix"><a href="">休闲娱乐/KTV</a></li>
+									<li class="clearfix"><a href="">生活服务</a></li>
+									<li class="clearfix"><a href="">丽人 / 美发 / 医学美容</a></li>
+									<li class="clearfix"><a href="">结婚 / 婚纱摄影 / 婚宴</a></li>
+									<li class="clearfix"><a href="">亲子 / 儿童乐园 / 幼教</a></li>
+									<li class="clearfix"><a href="">运动健身 / 健身中心</a></li>
+									<li class="clearfix"><a href="">家装 / 建材 / 家居</a></li>
+									<li class="clearfix"><a href="">学习培训 / 音乐培训</a></li>
+								</nav>
+							</ul>
+							</div>
+						</div>
+						<div class="header-content-searchBox">
+							<div class="header-content-searchBox-inputBox">
+								<input type="text" placeholder="搜索商家或地点"/>
+								<button class="r">
+									<i class="iconfont" style="color:#fff">&#xe637;</i>
+								</button>
+							</div>	
+							<div class="header-content-searchBox-hotwordBox">
+								<a href="">秦始皇帝陵博物院</a>
+								<a href="">西安秦岭野生动物园</a>
+								<a href="">Double one蹦床主题公园</a>
+								<a href="">迪比斯欢乐水世界</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+<!-----------------------------------------------------main------------------------------------------------------->
+			<div class="shop-car">
+				<div class="shop-car-listBox">
+					<form class="cake-form">
+						<table>
+							<tbody>
+								<tr class="first-tr">
+									<th class="desc">项目</th>
+									<th class="unit-price">单价</th>
+									<th class="num">数量</th>
+									<th class="total-price">总价</th>
+								</tr>
+								<tr>
+									<td>
+										<a href="">miss蛋糕:水果蛋糕</a>
+									</td>
+									<td>￥<span class="D-price">98</span></td>
+									<td>
+										<div class="input-number" >
+											<button class="min-btn" type="button"><i class="iconfont">&#xe675;</i></button>
+											<input type="text" class="num-input input" value="1" onkeypress="return event.keyCode>=49&&event.keyCode<=57"/>
+											<button class="max-btn" type="button"><i class="iconfont">&#xe64f;</i></button>
+										</div>
+									</td>
+									<td>
+										￥<span class="D-Allprice">98</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">miss蛋糕:水果蛋糕</a>
+									</td>
+									<td>￥<span class="D-price">98</span></td>
+									<td>
+										<div class="input-number" >
+											<button class="min-btn" type="button">-</button>
+											<input type="text" class="num-input input" value="1" />
+											<button class="max-btn" type="button">+</button>
+										</div>
+									</td>
+									<td>
+										￥<span class="D-Allprice">98</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="">miss蛋糕:水果蛋糕</a>
+									</td>
+									<td>￥<span class="D-price">98</span></td>
+									<td>
+										<div class="input-number" >
+											<button class="min-btn" type="button">-</button>
+											<input type="text" class="num-input input" value="1" />
+											<button class="max-btn" type="button">+</button>
+										</div>
+									</td>
+									<td>
+										￥<span class="D-Allprice">98</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row discount"></div>
+						<div class="row rowprice">
+							<span class="total-price">
+								应付金额：
+								<span class="total-price-right">
+									<b>￥</b><span class="sum-price">98</span>
+								</span>
+							</span>
+						</div>
+						<div class="row send-phone">
+							将发送美团券密码至手机号：15686228933
+							<a href="">绑定新手机号</a>
+						</div>
+						<div class="btn-box">
+							<input class="sub-btn" type="button" value="提交订单"/>
+						</div>
+					</form>
+				</div>
+			</div>
+<!--===============================footer=========================================-->						
+		<footer>
+			<div class="w clearfix" >
+				<div class="content">
+					<div class="column one">
+						<dl>
+							<dt class="dtTitle">用户帮助</dt>
+							<dd><a href="">申请退款</a></dd>
+							<dd><a href="">查看美团券密码</a></dd>
+							<dd><a href="">常见问题</a></dd>
+							<dd><a href="">用户协议</a></dd>
+							<dd><a href="">隐私政策</a></dd>
+							<dd><a href="">反诈骗公告</a></dd>
+						</dl>
+						<dl>
+							<dt class="dtTitle">美团服务</dt>
+							<dd><a href="">美团外卖</a></dd>
+							<dd><a href="">美团酒店</a></dd>
+							<dd><a href="">猫眼电影</a></dd>
+							<dd><a href="">美团配送</a></dd>
+							<dd><a href="">美团云</a></dd>
+							<dd><a href="">大众点评</a></dd>							
+							<dd><a href="">榛果民宿</a></dd>							
+							<dd><a href="">无人配送</a></dd>							
+						</dl>
+					</div>
+					<div class="column two">
+						<dl>
+							<dt class="dtTitle">商家合作</dt>
+							<dd><a href="">美食商家入驻(非外卖)</a></dd>
+							<dd><a href="">美团外卖开店申请</a></dd>
+							<dd><a href="">美团收银官网</a></dd>
+							<dd><a href="">外卖配送加盟申请</a></dd>
+							<dd><a href="">美团点评餐饮学院</a></dd>
+							<dd><a href="">酒店商家入驻</a></dd>							
+							<dd><a href="">境内度假商家入驻</a></dd>							
+							<dd><a href="">综合商家入驻</a></dd>							
+							<dd><a href="">榛果民宿房东商家入驻</a></dd>
+							<dd><a href="">商家开票申请</a></dd>
+							<dd><a href="">美团点评智能收银机</a></dd>
+							<dd><a href="">聚宝盆餐饮开放平台</a></dd>
+							<dd><a href="">美团智能支付</a></dd>
+							<dd><a href="">美团排队</a></dd>							
+							<dd><a href="">快驴进货商家合作</a></dd>							
+							<dd><a href="">代理商加盟</a></dd>							
+						</dl>
+					</div>
+					<div class="column three">
+						<dl>
+							<dt class="dtTitle">代理商加盟</dt>
+							<dd><a href="">智能支付渠道加盟商招募</a></dd>
+							<dd><a href="">到店餐饮代理商招募</a></dd>
+							<dd><a href="">非餐饮代理商招募</a></dd>
+							<dd><a href="">美团联盟</a></dd>
+							<dd><a href="">美团收银招募线上分销商</a></dd>
+							<dd><a href="">美团点评5S服务商招募</a></dd>
+						</dl>
+						<dl>
+							<dt class="dtTitle">行业规范</dt>
+							<dd><a href="">美团点评餐饮安全管理办法</a></dd>
+						</dl>
+						<dl>
+							<dt class="dtTitle">廉正举报</dt>
+							<dd><a href="">廉政邮箱</a></dd>
+						</dl>
+					</div>
+					<div class="column four">
+						<dl>
+							<dt class="dtTitle">关注美团</dt>
+							<dd><a href="">美团新浪微博</a></dd>
+						</dl>
+						<dl>
+							<dt class="dtTitle">公司信息</dt>
+							<dd><a href="">关于我们</a></dd>
+							<dd><a href="">投资者关系</a></dd>
+							<dd><a href="">加入我们</a></dd>
+							<dd><a href="">法律声明</a></dd>
+							<dd><a href="">商户服务协议</a></dd>
+							<dd><a href="">商户诚信公约及管理办法</a></dd>
+						</dl>						
+					</div>
+					<div class="column five">
+						<dl>
+							<dt class="dtTitle">消费者服务热线</dt>
+							<dd>外卖消费者：<a href="">10109777</a></dd>
+							<dd>猫眼消费者：<a href="">10105335</a></dd>
+							<dd>其他消费者：<a href="">10107888</a></dd>
+						</dl>						
+						<dl>
+							<dt class="dtTitle">商家服务热线</dt>
+							<dd>外卖&餐饮商家：<a href="">10105557</a></dd>
+							<dd>休闲娱乐、丽人、ktv、教育、结婚、亲子、家装等商家：<a href="">10100107</a></dd>
+						</dl>						
+						<dl>
+							<dt class="dtTitle">投诉举报热线</dt>
+							<dd>违法和不良信息举报电话：<a href="">4006018900</a></dd>
+							<dd>举报邮箱：<a href="">tousujubao@meituan.com</a></dd>
+						</dl>						
+						<dl>
+							<dt class="dtTitle"><a href="">商家自助入驻美团入口</a></dt>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="w">
+				<div class="banquan">
+					<div class="banquan-left">
+						<p>©美团网团购 meituan.com
+							<a href="">京ICP证070791号</a>
+							<a href="">京ICP备10211739号</a>
+							<a href="">电子公告服务规则</a>
+						</p>
+						<p><a href="">广播电视节目制作经营许可证（京）字第03889号</a></p>
+					</div>
+					<div class="banquan-right">
+						<a href="">京公网安备11010502025545号</a>
+						<div class="banquan-right-Img">
+							<a href=""><img src="../img/footer-right.png"/></a>
+							<a href=""><img src="../img/footer-right2.png"/></a>
+							<a href=""><img src="../img/footer-right3.png"/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../js/header.js" ></script>
+<script type="text/javascript" src="../js/shopcar.js" ></script>

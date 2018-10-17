@@ -1,29 +1,5 @@
 @charset "utf-8";
-header{
-        .header-content{
-            padding:0;
-           .header-content-logoBox{ 
-             float: left; padding:28px 60px 40px 0; font-size: 16px;min-width: 220px; height: 54px; box-sizing: content-box;
-            .header-content-logoBox-aBox{
-            position: relative;width:260px;
-            span{
-                position: absolute;color:#222;margin-left: 10px;bottom:12px;
-                }
-            .header-CaiD{
-                float: right; background: #fff;
-                position: relative;padding: 3px 13px 3px 4px;cursor: pointer;
-                display: inline-block;
-                color: #999;
-                top:16px;
-                font-size: 12px;
-                margin-left: 14px;
-                border: 1px solid #e5e5e5;
-                border-radius: 4px;
-                    }     
-            }
-            }
-        }
-    }
+
 main{
     .content{
         width: 1190px;margin: auto;color:#222;
@@ -199,6 +175,35 @@ main{
                                         }
                                     }
                                 }
+                            }
+                        }
+                        #changeBox{
+                            margin-bottom: 40px;text-align: center;padding: 50px;
+                            img{
+                                display: inline-block;
+                                width: 160px;
+                                height: 120px;
+                            }
+                            span{
+                                display: block;
+                                margin: 10px 0 14px;
+                                color: #666;
+                                font-size: 16px;
+                                line-height: 26px;
+                            }
+                            a{
+                                display: block;
+                                background-color: #13D1BE;
+                                width: 120px;
+                                height: 40px;
+                                font-size: 14px;
+                                line-height: 40px;
+                                padding: 0;
+                                margin: 0 auto;
+                                border-radius: 100px;
+                                text-align: center;
+                                color: #fff;
+                                transition: background .6s ease;
                             }
                         }
                         .DaiJinQuan{
@@ -401,6 +406,7 @@ main{
                         font-size: 20px;
                         line-height: 26px;
                         color: #333;
+                        width: 100px;
                     }
                     .near-listBox{
                         width:1190px;

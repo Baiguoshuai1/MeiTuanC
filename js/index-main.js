@@ -1,7 +1,6 @@
 
 var clickpointerBoxCount=0;
 var clickpointerBoxCount2=0;
-
 	function pointerBox1(){
 		clickpointerBoxCount++;
 		if(clickpointerBoxCount==1){		//防止连续多次点击按钮图片停顿
@@ -32,13 +31,6 @@ var clickpointerBoxCount2=0;
 	}
 
 $(function(){
-	$(".ul-nav li").each(function(){				
-		$(this).hover(function(){						//显示右上角导航的子菜单
-			$(this).not(".spec").not(".ul-nav-first li").toggleClass("ul-nav-liOneHover");
-			$(this).children(".ul-nav-first").toggleClass("ul-nav-firstHover")
-		})
-	})
-	
 	$(".left-banner-container-lie li").each(function(){	
 		$(this).hover(function(){//循环显示分类的列表效果
 			$(this).addClass("hover1");					//修复刷新的时候鼠标在该元素上的bug
@@ -62,7 +54,7 @@ $(function(){
 			})
 	})
 
-	$(".four-sliderBox-pointerBox")[1].onclick=function(){
+	$(".four-sliderBox-pointerBox")[1].onclick=function(){		//电影轮播ul
 		pointerBox1();
 	}
 	$(".four-sliderBox-pointerBox")[0].onclick=function(){
@@ -75,22 +67,21 @@ $(function(){
 		$(".four-sliderBox-pointerBox").stop();
 		$(".four-sliderBox-pointerBox").fadeOut(400)
 	})
-			let slider=new Slider(				// 轮播图
-			$(".slider-imgBox")[0],
-			550,
-			240,
-			["../img/daa73310c9e57454dc97f0146640fd9f69772.jpg","../img/a97baf515235f4c5a2b1323a741e577185048.jpg","../img/33ff80dc00f832d697f3e20fc030799560495.jpg","../img/e419ae8488f776407459b0ee7eada070286451.jpg"],
-			10,
-			2,
-			"#eee",
-			"#fff",
-			false,
-			true,
-			"#",
-			3000
-			)
-		
-})
+		let slider=new Slider(				// 轮播图
+		$(".slider-imgBox")[0],
+		550,
+		240,
+		["../img/daa73310c9e57454dc97f0146640fd9f69772.jpg","../img/a97baf515235f4c5a2b1323a741e577185048.jpg","../img/33ff80dc00f832d697f3e20fc030799560495.jpg","../img/e419ae8488f776407459b0ee7eada070286451.jpg"],
+		10,
+		2,
+		"#eee",
+		"#fff",
+		false,
+		true,
+		"#",
+		3000
+		)	
+	})
 
 
 
