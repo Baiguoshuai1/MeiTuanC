@@ -25,10 +25,14 @@
 						<a href="">临潼</a>
 						]</span>
 						<span class="change">
+							<label class="visBox">
+							<a href="login.html" style="color:#28BFAC" class="a-login login_blank">立即登录</a>
+							<a href="registe.html" class="registe registe_blank">注册</a>
+							</label>
+							<label class="noBox" style="display: none;">
 							<a href="d" class="username"></a>
 							<a class="exit" style="cursor: pointer;">退出</a>
-							<a href="login.html" style="color:#28BFAC;display: none;" class="a-login publoginbtn">立即登录</a>
-							<a href="registe.html" style="display: none;" class="registe">注册</a>
+							</label>
 						</span>
 					</div>
 					<div class="r header-bar-nav">
@@ -36,7 +40,7 @@
 							<li class="ul-nav-liOne">
 								<a href="">我的美团</a>
 								<ul class="ul-nav-first" style="display: none;position:absolute;">
-									<li><a href="">我的订单</a></li>
+									<li><a style="cursor: pointer;" class="my-shopcar">我的订单</a></li>
 									<li><a href="">我的收藏</a></li>
 									<li><a href="">抵用券</a></li>
 									<li><a href="">账户设置</a></li>
@@ -191,7 +195,7 @@
 						<div class="buy-left">
 							<div>
 								<h3>商家团购及优惠</h3>
-								<div class="shop-listBox" id="changeOne">
+								<div class="shop-listBox" id="changeOne" style="display: block">
 									<h4>21款堂食套餐</h4>
 									<!--<div>
 										<div class="one-clear">
@@ -457,7 +461,7 @@
 								<div class="shop-listBox" id="changeBox" style="display: none">
 									<img src="../img/cake/56a7d5abcb5ce3d90fc91195e5b5856911194.png" />
 									<span>请登录后查看详细团购优惠</span>
-									<a href="login.html" class="publoginbtn">立即登录</a>
+									<a href="login.html" class="login_blank">立即登录</a>
 								</div>
 								<div class="DaiJinQuan" id="changeTwo">
 									<h4>1张代金券</h4>
@@ -1005,6 +1009,7 @@
 </html>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
 <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../js/cookieJson.js" ></script>
 <script type="text/javascript" src="../js/header.js" ></script>
 <script language="JavaScript">
 	$(function(){
@@ -1072,17 +1077,21 @@
 			}
 		
 		
-		if($(".username").html()==""||$(".username").html()==null){	//切换是否登录的样式
-			$("#changeOne").add($("#changeTwo")).add($(".exit")).add($(".username")).attr("style","display: none;")
+		if(cookieJson.username==undefined){	//切换是否登录的样式
+			$("#changeOne").attr("style","display: none;")
 			$("#changeBox").attr("style","display:block;")
-			$(".a-login").add($(".registe")).attr("style","display: inline-block;")
-			$(".a-login")[0].style.color="#28BFAC";	//颜色被attr属性里的style覆盖
 			$("#ulchange").attr("style","height:660px")
 		}
-		$(".publoginbtn").click(function(){		//记录跳转页面
-			$.cookie("back-html","misscake.html",{path:"/"})	//先存储网址，跳到登录页面再存储用户名
+		$(".login_blank").click(function(){		//登录 为了跳转页面
+			$.cookie("back-html","misscake.html",{path:"/"})//先存储网页地址，跳到登陆页面再存储用户名
 		})
-		
+		$(".registe_blank").click(function(){		//注册
+			$.cookie("back-html","misscake.html",{path:"/"})
+		})
+		$(".my-shopcar").click(function(){			//我的订单
+			$.cookie("back-html","misscake.html",{path:"/"})
+		})
+
 	})
 	
 </script>

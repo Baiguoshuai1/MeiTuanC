@@ -23,8 +23,6 @@ summary 在details中   摘要 ul-nav-firstHover
 		<link rel="stylesheet" href="../css/Main-five.css">
 		<link rel="stylesheet" href="../css/Main-six.css">
 		<link rel="stylesheet" href="../css/footer.css">
-	<script language="JavaScript">(function(){var cookieKey=document.cookie.split(";")[document.cookie.split(";").length-1].split("=")[0];
-	console.log(cookieKey);if(cookieKey==" username"||cookieKey=="username"){location.href="MeiTuanLoginBack.html"}})()</script>	<!--键值对之间默认空格隔开-->
 	</head>
 	<body>
 <!--===============================header========================================-->	
@@ -41,16 +39,22 @@ summary 在details中   摘要 ul-nav-firstHover
 						<a href="">临潼</a>
 						]</span>
 						<span class="change">
-							<a href="login.html" style="color:#28BFAC" class="a-login">立即登录</a>
-							<a href="registe.html" class="registe">注册</a>
+							<label class="visBox">
+							<a href="login.html" style="color:#28BFAC" class="a-login login_blank">立即登录</a>
+							<a href="registe.html" class="registe registe_blank">注册</a>
+							</label>
+							<label class="noBox" style="display: none;">
+							<a href="d" class="username"></a>
+							<a class="exit" style="cursor: pointer;">退出</a>
+							</label>
 						</span>
 					</div>
 					<div class="r header-bar-nav">
 						<ul class="ul-nav">
 							<li class="ul-nav-liOne">
-								<a href="">我的美团</a>
+								<a style="cursor: pointer;" class="my-shopcar">我的美团</a>
 								<ul class="ul-nav-first" style="display: none;position:absolute;">
-									<li><a href="">我的订单</a></li>
+									<li><a style="cursor: pointer;" class="my-shopcar">我的订单</a></li>
 									<li><a href="">我的收藏</a></li>
 									<li><a href="">抵用券</a></li>
 									<li><a href="">账户设置</a></li>
@@ -217,15 +221,72 @@ summary 在details中   摘要 ul-nav-firstHover
 							<a href="" class="l ktv">
 									<img src="../img/e473bb428f070321269b23370ff02ba956209.jpg" class="l topImg">
 							</a>
-							<div class="login">
+							<div class="login vis-personBox">
 								<div>
 									<img src="../img/avatar.jpg">
 									<p>Hi!  &nbsp;你好</p>
 									<div>
-										<a class="LoginregisteA" href="registe.html">注册</a>
+										<a class="LoginregisteA registe_blank" href="registe.html">注册</a>
 									</div>
 									<div>
-										<a class="LoginregisteA" href="login.html">立即登录</a>
+										<a class="LoginregisteA login_blank" href="login.html">立即登录</a>
+									</div>
+								</div>
+							</div>
+							<div class="login no-personBox" style="display: none;">
+								<div>
+									<div>
+										<a href=""><img src="../img/35ad1f9253761ea6ff822b5e659f234f3758.png"></a>
+										<a href="#">
+											<p>
+												<span class="username"></span>
+												<i class="iconfont">&#xe638;</i>
+											</p>
+										</a>
+									</div>
+									<div class="loginBox-row">
+										<div class="fn-item">
+											<a href="">
+												<div>
+													<i class="iconfont">&#xe501;</i>
+												</div>
+												<p>我的订单</p>
+											</a>
+										</div>
+										<div class="fn-item">
+											<a href="">
+												<div>
+													<i class="iconfont">&#xe622;</i>
+												</div>
+												<p>我的收藏</p>	
+											</a>
+										</div>
+										<div class="fn-item">
+											<a href="">
+												<div>
+													<i class="iconfont">&#xe65c;</i>
+												</div>
+												<p>抵用券</p>
+											<a href="">	
+										</div>
+									</div>
+									<div class="loginBox-row last-loginBox-row">
+										<div class="fn-item">
+											<a href="">
+												<div>
+													<i class="iconfont">&#xe639;</i>
+												</div>
+												<p>余额</p>	
+											</a>
+										</div>
+										<div class="fn-item">
+											<a href="">
+												<div>
+													<i class="iconfont">&#xe62b;</i>
+												</div>
+												<p>更多</p>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1024,9 +1085,10 @@ summary 在details中   摘要 ul-nav-firstHover
 </html>
 <script language="JavaScript" src="../js/jquery-3.3.1.min.js" ></script>
 <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../js/cookieJson.js" ></script>
 <script type="text/javascript" src="../js/header.js" ></script>
 <script type="text/javascript" src="../js/slider.js" ></script>
-<script type="text/javascript" src="../js/index-main.js" ></script>
+<script type="text/javascript" src="../js/MeituanIndex.js" ></script>
 
 
 

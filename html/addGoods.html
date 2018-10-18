@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<body>
-	<form action="../php/saveGoods.php" method="post">
+	<!--<form action="../php/saveGoods.php" method="post">
 		商品编号：<input type="text" name="goodsId" /><br/>
 		商品名称：<input type="text" name="goodsName" /><br/>
 		商品类型：<input type="text" name="goodsType" /><br/>
@@ -27,7 +27,49 @@
 		备用12：<input type="text" name="beiyong12" /><br/>
 		备用13：<input type="text" name="beiyong13" /><br/>
 		<input type="submit" value="保存商品" />
-	</form>
-		
+	</form>-->
+		<input type="button"  value="存cookie"/>
 	</body>
 </html>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script language="JavaScript">
+	$("input").click(function(){
+				
+		$.cookie("back-html","index.html")
+		$.cookie("username","bbb")
+		$.cookie("id","001")
+		alert("1")		
+})
+	var localcookie=document.cookie
+	console.log(localcookie)
+	var obj=localcookie.split(";")
+	console.log(obj)
+	var json={};
+	var key=null;
+	var value=null;
+	for(let i in obj){
+		console.log(obj[i].split("=")[0])
+		key=obj[i].split("=")[0]
+		value=obj[i].split("=")[1]
+		json[key]=value
+		
+	}
+	console.log(json)
+//	let jsonA=JSON.stringify(obj)
+//	console.log(jsonA)
+//	let jsonB=JSON.parse(jsonA)
+//	console.log(jsonB)
+//	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+

@@ -15,7 +15,6 @@ var clickpointerBoxCount2=0;
 				left:0
 			},600,function(){clickpointerBoxCount=0;})	
 	}
-	
 	function pointerBox2(){
 		clickpointerBoxCount2++;
 		if(clickpointerBoxCount2==1){
@@ -29,7 +28,6 @@ var clickpointerBoxCount2=0;
 				left:1168
 			},600,function(){clickpointerBoxCount2=0;})
 	}
-
 $(function(){
 	$(".left-banner-container-lie li").each(function(){	
 		$(this).hover(function(){//循环显示分类的列表效果
@@ -81,9 +79,18 @@ $(function(){
 		"#",
 		3000
 		)	
-	})
+		$(".login_blank").click(function(){		//登录 为了跳转页面
+			$.cookie("back-html","MeiTuanIndex.html",{path:"/"})//先存储网页地址，跳到登陆页面再存储用户名
+		})
+		$(".registe_blank").click(function(){		//注册
+			$.cookie("back-html","MeiTuanIndex.html",{path:"/"})
+		})
+		$(".my-shopcar").click(function(){
+			$.cookie("back-html","MeiTuanIndex.html",{path:"/"})
+		})
+		
 
-
+})
 
 
 

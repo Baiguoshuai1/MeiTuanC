@@ -34,3 +34,13 @@ header a:hover{color:#28c0ac}
 
 .ul-nav-liOneHover{border-left: 1px solid #ddd;border-right:1px solid #ddd;margin:0 -1px;background-color: #fff;}
 .ul-nav-firstHover{border: 1px solid #ddd;border-top:none;background-color: #fff;display: block!important}//显示右上角导航的子菜单
+//addClass
+.bl{
+    display: block;
+}
+.non{
+    display: none;
+}
+.inl{
+    display: inline-block;
+}

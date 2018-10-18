@@ -36,7 +36,7 @@
 							<li class="ul-nav-liOne">
 								<a href="">我的美团</a>
 								<ul class="ul-nav-first" style="display: none;position:absolute;">
-									<li><a href="">我的订单</a></li>
+									<li><a style="cursor: pointer;" class="my-shopcar">我的订单</a></li>
 									<li><a href="">我的收藏</a></li>
 									<li><a href="">抵用券</a></li>
 									<li><a href="">账户设置</a></li>
@@ -67,7 +67,7 @@
 					<div class="w" style="display: flex;">
 						<div class="header-content-logoBox">
 							<div class="header-content-logoBox-aBox">
-							<a href="MeiTuanIndex.html">
+							<a id="logoA" href="MeiTuanIndex.html">
 								<img src="../img/logo.png" style="width:126px;">
 							</a>
 							<span> · 美食</span>
@@ -121,7 +121,7 @@
 									<th class="num">数量</th>
 									<th class="total-price">总价</th>
 								</tr>
-								<tr>
+								<!--<tr>
 									<td>
 										<a href="">miss蛋糕:水果蛋糕</a>
 									</td>
@@ -152,23 +152,7 @@
 									<td>
 										￥<span class="D-Allprice">98</span>
 									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="">miss蛋糕:水果蛋糕</a>
-									</td>
-									<td>￥<span class="D-price">98</span></td>
-									<td>
-										<div class="input-number" >
-											<button class="min-btn" type="button">-</button>
-											<input type="text" class="num-input input" value="1" />
-											<button class="max-btn" type="button">+</button>
-										</div>
-									</td>
-									<td>
-										￥<span class="D-Allprice">98</span>
-									</td>
-								</tr>
+								</tr>-->
 							</tbody>
 						</table>
 						<div class="row discount"></div>
@@ -176,7 +160,7 @@
 							<span class="total-price">
 								应付金额：
 								<span class="total-price-right">
-									<b>￥</b><span class="sum-price">98</span>
+									<b>￥</b><span class="sum-price"></span>
 								</span>
 							</span>
 						</div>
@@ -318,5 +302,6 @@
 	</body>
 </html>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="../js/cookieJson.js" ></script>
 <script type="text/javascript" src="../js/header.js" ></script>
 <script type="text/javascript" src="../js/shopcar.js" ></script>

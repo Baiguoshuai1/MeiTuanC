@@ -5,7 +5,7 @@
 		<title>注册 | 白国帅的美团网</title>
 		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
 		<link rel="stylesheet" href="../css/public.css"/>
-		<link rel="stylesheet" href="../css/registe.css"/>		
+		<link rel="stylesheet" href="../css/registe.css"/>
 	</head>
 	<body>
 		<header>
@@ -83,6 +83,7 @@
 </html>
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
 <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="../js/cookieJson.js" ></script>
 <script language="JavaScript">
 $(function(){
 	var result=null;
@@ -114,11 +115,11 @@ $(function(){
 			$(".input-tip").children(".changeText1").html("网络出现问题，请重试");
 	}
 }
-	function setCookie(c_name,value,expiredays){		//存储cookies
-		var exdate=new Date()
-		exdate.setDate(exdate.getDate()+expiredays)
-		document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
-	}	
+//	function setCookie(c_name,value,expiredays){		//存储cookies
+//		var exdate=new Date()
+//		exdate.setDate(exdate.getDate()+expiredays)
+//		document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
+//	}	
 	function inpFunc(){					//验证input不为空
      let num=0;
      let str="";
@@ -259,11 +260,15 @@ $(function(){
 			   success:function(msg){		//msg为后台返回值
 				if(msg=='1'){
 					//setCookie($('#t1').val(),$('#t2').val(),7);	//存储cookie	
-					$.cookie($('#t1').val(),$('#t2').val(),{expires:1,path:"/"})
+					$.cookie("username",$('#t1').val(),{path:"/"})
 					console.log(document.cookie)
 					alert("注册成功");
+						if(cookieJson["back-html"]=="misscake.html"){
+ 							location.href="misscake.html"
+ 						}else{
+ 							location.href="MeiTuanIndex.html";
+ 						}					
 					//location.href=document.referrer||host + "MeiTuanLogin1.html";
-					location.href="MeiTuanLoginBack.html";
 					//console.log(document.referrer).
 				}else{
 					alert('服务器错误');

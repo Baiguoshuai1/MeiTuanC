@@ -85,6 +85,7 @@
 </html>
  <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
  <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
+ <script type="text/javascript" src="../js/cookieJson.js" ></script>
  <script language="JavaScript">
  	$(function(){
  		var checkCount=0;
@@ -107,11 +108,11 @@
  				radomCheckIMg();
  		})
  		
- 		function setCookie(c_name,value,expiredays){		//存储cookies
-			var exdate=new Date()
-			exdate.setDate(exdate.getDate()+expiredays)
-			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
-		}
+// 		function setCookie(c_name,value,expiredays){		//存储cookies
+//			var exdate=new Date()
+//			exdate.setDate(exdate.getDate()+expiredays)
+//			document.cookie=c_name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path="+"/";
+//		}
  		function checkYan(){
 			let Num=["o4W","G78d","Z8UF","BHAe","3CDY","RK7A","HA85","ET9E","XDdu","DL6e","WZFZ","Gpao",
 					"aZCA","ZX6S","PDYh","Bd5T","MZFC","S2B7","UZVm","VKVX"]
@@ -162,9 +163,6 @@
  				})
  				
  			}
- 	var localCookie=document.cookie;
-	var cookieValue=localCookie.split(";")[localCookie.split(";").length-1].split("=") [1];	//最后一个键值对的值
-	var cookieNameNum=localCookie.split(";")
 
  			let ret1=checkYan();
  			let ret2=inpFunc();
@@ -181,10 +179,10 @@
  							$.cookie("username",$('#t1').val(),{path:"/"})
  						}
  						$(".validate")[0].style.visibility="hidden";
- 						if(cookieValue=="MeiTuanLoginBack.html"){
- 							location.href="MeiTuanLoginBack.html";
- 						}else if(cookieValue=="misscake.html"){
+ 						if(cookieJson["back-html"]=="misscake.html"){
  							location.href="misscake.html"
+ 						}else{
+ 							location.href="MeiTuanIndex.html";
  						}
  					}else{
  						checkCount++;
