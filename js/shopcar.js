@@ -66,6 +66,7 @@
 				
 			
 		$(".num-input")[i].onblur=function(){		//数字失去焦点
+			let utNum=parseInt($(".num-input")[i].value);
 			if(utNum<99){
 					$.ajax({
 						type:"get",
