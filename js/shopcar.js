@@ -87,8 +87,9 @@
 							}	
 						})
 								//页面删除
-				$(".addTrbox")[i].style.display="none";
-
+				$($(".addTrbox")[i]).fadeOut(400,function(){
+					$(this)[i].style.display="none";
+					})
 				}
 		}
 			function allPrice(obj){
