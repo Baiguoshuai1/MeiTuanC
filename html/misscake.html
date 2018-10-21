@@ -196,7 +196,7 @@
 							<div>
 								<h3>商家团购及优惠</h3>
 								<div class="shop-listBox" id="changeOne" style="display: block">
-									<h4>21款堂食套餐</h4>
+									<h4><span class="Idcount">21</span>款堂食套餐</h4>
 									<!--<div>
 										<div class="one-clear">
 											<div class="pic">
@@ -879,7 +879,113 @@
 					</div>
 				</div>
 			</div>
-		</main>
+				<div class="pop" style="display: none;">
+					<div class="pop-component">
+						<div class="overlay">
+						</div>
+						<div class="pop-content">
+							<div class="pop-content-little">
+								<img src="../img/cake/close.png" class="closeIMg"/>
+								<div class="pop-content-little-header">
+									<div class="pic">
+										<div class="imgbox" style="width:100%;height:100%">
+											<img class="cakeImg" src="../img/cake/d325e7c29fa95b6557ab8bcd460b679a283493.png">
+										</div>
+									</div>
+									<div class="dea">
+										<p class="little-header-cakename  name">蛋糕名称大字</p>
+										<p class="little-header-cakeprice">
+											<b>￥<span class="D-price">160</span></b><span>门店价￥<span class="doorprice">245</span></span>
+										</p>
+										<p class="actions">
+											<a href="shopcar.html" class="buybuybuy">立即抢购</a>
+											<a href="">查看详情</a>
+										</p>
+									</div>
+								</div>
+								<div class="order">
+									<h4>本单详情</h4>
+									<div class="order-content">
+										<div class="order-content-cont">
+											套餐内容
+											<div class="fr">
+												<span>单价</span><span>数量/规格</span><span class="lastspan">小计</span>
+											</div>
+										</div>
+										<div class="order-content-name name">
+											<div class="fl cakecontent">2 选 1</div>
+											<div class="fr pBox">
+												<!--<p>
+													<span class="clear title title1">蛋糕名字1</span>
+													<span class="clear">￥<span class="doorprice">245</span></span>
+													<span class="clear"><span class="count">1</span>个</span>
+													<span class="clear last">￥<span class="doorprice">245</span></span>
+												</p>
+												<p>
+													<span class="clear title title2">蛋糕名字1</span>
+													<span class="clear">￥<span class="doorprice">245</span></span>
+													<span class="clear"><span class="count">1</span>个</span>
+													<span class="clear last">￥<span class="doorprice">245</span></span>
+												</p>-->
+											</div>
+										</div>
+										<div class="order-content-total">
+											<span class="clear">价值￥<span class="doorprice">245</span></span>
+											<span class="clear">美团价:<b>￥<span class="D-price">160</span></b></span>
+										</div>
+									</div>
+									<div class="remarks">
+										<div id="xiaoSpan">
+											<!--<span class="clear">
+												· <span class="title1">蛋糕名字1</span>规格：约<span class="size">8英寸</span>，<span class="cir">圆形</span>
+											</span>
+											<span class="clear">
+												· <span class="title1">蛋糕名字2</span>规格：约<span class="size">9英寸</span>，<span class="cir">方形</span>
+											</span>-->
+										</div>
+										<span class="clear">·</span>
+										<span class="clear">·</span>
+										<span class="clear last">· 英寸：1 英寸≈2.54厘米</span>
+									</div>
+									<div class="notes">
+										<h4>购买须知</h4>
+										<div class="cont">
+											<p class="clear">
+												<span class="fl">有效期</span>
+												<span class="fr">2017.8.16 至 2018.11.13（周末、法定节假日通用）</span>
+											</p>
+											<p class="clear">
+												<span class="fl">使用时间</span>
+												<span class="fr">08:15-23:45</span>
+											</p>
+											<p class="clear">
+												<span class="fl">使用规则</span>
+												<span class="fr">团购用户不可同时享受商家其他优惠，电话预约，请至少提前6小时致电商家预约，提供免费WiFi，自提配送皆可，免费配送范围：三环内</span>
+											</p>
+										</div>
+									</div>
+									<div class="photo">
+										<h4>美团实拍</h4>
+										<ul class="clear">
+											<li class="noMr">
+												<div class="imgbox" style="height: 100%; width: 100%;">
+													<img class="cakeImg" src="../img/cake/d325e7c29fa95b6557ab8bcd460b679a283493.png">
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="line" style="margin-top: 40px;"></div>
+									<div class="footer">
+										<span>
+											<a href="">美团商家</a>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 <!--===============================footer=========================================-->						
 		<footer>
 			<div class="w clearfix" >
@@ -1013,6 +1119,9 @@
 <script type="text/javascript" src="../js/header.js" ></script>
 <script language="JavaScript">
 	$(function(){
+//		window.onbeforeunload = function(){	//刷新页面删除cookie
+//			deleteCookie();
+//		}
 		$.ajax({
 			type:"get",
 			url:"../php/getGoodsList.php",
@@ -1046,9 +1155,11 @@
 										"</div>"+
 									"</div>")
 				$($(".imgBox")[i]).children("img").attr("src",obj[i].goodsImg)	//添加属性值
-				$($(".cake-name")[i]).html(obj[i].goodsName)
-				$($(".count")[i]).html(obj[i].goodsCount)
-				$($(".price-now")[i]).html(obj[i].goodsPrice)
+				$(".Idcount").html(obj.length)				//获取食堂套餐数量
+				$($(".cake-name")[i]).html(obj[i].goodsName)//获取每个蛋糕名字
+				$($(".count")[i]).html(obj[i].beiyong4)		//获取每个蛋糕的销量
+				$($(".price-now")[i]).html(obj[i].goodsPrice)//获取每个蛋糕的价格
+				
 			}	
 		}
 		//添加到购物车
@@ -1073,6 +1184,50 @@
 							}
 						});
 					})
+					//打开层
+					$($(".pic")[i]).add($($(".name")[i])).add($($(".sale")[i])).add($($(".price")[i])).click(function(){
+						$(".pop").attr("style","display: block;")	//显示商品详情框
+						$("body").attr("style","overflow: hidden;")
+						//动态创建p
+						for(let j=0;j<obj[i].beiyong9;j++){
+							$(".pBox").append("<p>"+
+								"<span class=clear>蛋糕名字1</span>"+
+								"<span class=clear>￥<span class=doorprice>245</span></span>"+
+								"<span class=clear><span class=count>1</span>个</span>"+
+								"<span class=clear>￥<span class=doorprice>245</span></span>"+
+							"</p>")
+							$("#xiaoSpan").append("<span class=clear>"+	//prepend 从头部加元素 ，那给元素加内容就会只改最后一个（给每个title2蛋糕名字）
+											"· <span class=title2>蛋糕名字1</span>规格：约<span class=size>8英寸</span>，<span class=cir>圆形</span>"+
+										"</span>")
+							var Bnum=Number(6)+Number(j)
+							var ress="beiyong"+Bnum
+							$(".pBox").children("p").children("span:first-child").addClass("title title1")	//给第一个span加class名
+							$(".pBox").children("p").children("span:last-child").addClass("last")//给最后一个span加class名
+							$($(".title1")[j]).html(obj[i][ress])			//每个p里的title1蛋糕名字
+							$($(".title2")[j]).html(obj[i][ress])			//每个title2蛋糕名字
+						}
+						
+//						$(".pop").attr("style","display: block;")	//显示商品详情框
+//						$("body").attr("style","overflow: hidden;")
+						
+						$(".cakeImg").attr("src",obj[i].goodsImg)	//获取蛋糕图片
+						$(".little-header-cakename").html(obj[i].goodsName)//改大名
+						$(".D-price").html(obj[i].goodsPrice)		//获取价格
+						$(".doorprice").html(obj[i].beiyong5)		//获取门市价
+						$(".cakecontent").html(obj[i].goodsType)	//获取套餐内容
+						$($(".title2")[i]).html(obj[i][ress])			//每title2蛋糕名字
+					})
+					//关闭层
+					$(".closeIMg").click(function(){	
+						var date=new Date(); 	
+		  				date.setTime(date.getTime()-10000); 	//删cookie（商品的序号）
+		 				document.cookie="shop-id"+"=s; expires="+date.toGMTString()+";path="+"/";//如果给cookie设置了path，删除也要设置同样的格式
+						$(".pBox").empty()                //删除p
+						$("#xiaoSpan").empty()            //删除小span
+						$(".pop").attr("style","display: none;")	//商品详情框消失
+						$("body").attr("style","")
+					})
+					
 				}
 			}
 		

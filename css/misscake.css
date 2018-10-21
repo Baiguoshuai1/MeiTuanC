@@ -1,0 +1,561 @@
+main .content {
+  width: 1190px;
+  margin: auto;
+  color: #222;
+}
+main .content .bread {
+  font-size: 12px;
+  color: #222;
+  line-height: 17px;
+  padding: 19px 0;
+}
+main .content .bread span a {
+  color: #222;
+}
+main .content .cake-style {
+  font-size: 12px;
+  color: #666;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px 33px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+main .content .cake-style .cake-style-left {
+  float: left;
+  width: 748px;
+  padding-right: 20px;
+}
+main .content .cake-style .cake-style-left .left-name {
+  font-size: 26px;
+  line-height: 37px;
+  height: 37px;
+}
+main .content .cake-style .cake-style-left .left-name .SS {
+  float: left;
+}
+main .content .cake-style .cake-style-left .left-name .shiping {
+  float: right;
+  float: right;
+  color: #00c9b3;
+  font-size: 12px;
+  cursor: pointer;
+}
+main .content .cake-style .cake-style-left .left-name .shiping img {
+  width: 15px;
+  height: 18px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  margin-right: 2px;
+}
+main .content .cake-style .cake-style-left .left-score {
+  font-size: 14px;
+  height: 14px;
+  margin: 6px 0 17px;
+}
+main .content .cake-style .cake-style-left .left-score .score-star {
+  display: inline-block;
+  width: 84px;
+  height: 24px;
+  position: relative;
+}
+main .content .cake-style .cake-style-left .left-score .score-star img {
+  height: 13px;
+}
+main .content .cake-style .cake-style-left .left-score p {
+  display: inline-block;
+}
+main .content .cake-style .cake-style-left .left-score p span {
+  margin-left: 10px;
+}
+main .content .cake-style .cake-style-left .left-address {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 0 11px;
+}
+main .content .cake-style .cake-style-left .left-address p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+main .content .cake-style .cake-style-left .left-address p b {
+  background-image: url(../img/cake/16pt.png);
+  width: 14px;
+  height: 14px;
+  background-position-x: -28px;
+  background-size: auto 14px;
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  margin-top: -3px;
+  cursor: pointer;
+}
+main .content .cake-style .cake-style-left .left-tags {
+  padding-top: 20px;
+}
+main .content .cake-style .cake-style-left .left-tags li {
+  float: left;
+  margin-right: 16px;
+  line-height: 17px;
+}
+main .content .cake-style .cake-style-left .left-tags li img {
+  margin: auto auto 11px;
+  width: 24px;
+  height: 23px;
+  border-radius: 0;
+  display: block;
+}
+main .content .cake-style .cake-style-right {
+  float: left;
+  width: 380px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .content .cake-style .cake-style-right .big {
+  height: 214px;
+  width: 100%;
+}
+main .content .cake-style .cake-style-right .big img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 4px;
+}
+main .content .cake-style .cake-style-right ul {
+  width: 385px;
+  padding-top: 10px;
+}
+main .content .cake-style .cake-style-right ul li {
+  float: left;
+  width: 92px;
+  margin-right: 4px;
+  height: 60px;
+}
+main .content .cake-style .cake-style-right ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+main .content .cake-buy {
+  color: #222;
+  padding-top: 40px;
+}
+main .content .cake-buy .buy-left {
+  width: 950px;
+  float: left;
+}
+main .content .cake-buy .buy-left h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+main .content .cake-buy .buy-left .shop-listBox {
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 16px 20px 20px;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-left .shop-listBox h4 {
+  font-size: 16px;
+  line-height: 26px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear {
+  padding-bottom: 20px;
+  margin-top: 17px;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic {
+  width: 100px;
+  height: 100px;
+  float: left;
+  cursor: pointer;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right {
+  float: left;
+  padding: 1px 0 0 20px;
+  width: 788px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right a {
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #f90;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  float: right;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 100px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .name {
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  margin: 0;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .name span {
+  vertical-align: middle;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .name b {
+  display: inline-block;
+  background-image: url(../img/cake/16pt.png);
+  background-position-x: -48px;
+  background-size: auto 16px;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .sale {
+  font-size: 12px;
+  color: #666;
+  line-height: 17px;
+  margin: 1px 0 22px;
+  cursor: pointer;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .price {
+  font-size: 30px;
+  color: #f60;
+  cursor: pointer;
+  margin: 0;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .price b {
+  font-weight: 400;
+  font-size: 14px;
+}
+main .content .cake-buy .buy-left .shop-listBox .one-clear .pic-right .price span {
+  color: #999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+main .content .cake-buy .buy-left #changeBox {
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 50px;
+}
+main .content .cake-buy .buy-left #changeBox img {
+  display: inline-block;
+  width: 160px;
+  height: 120px;
+}
+main .content .cake-buy .buy-left #changeBox span {
+  display: block;
+  margin: 10px 0 14px;
+  color: #666;
+  font-size: 16px;
+  line-height: 26px;
+}
+main .content .cake-buy .buy-left #changeBox a {
+  display: block;
+  background-color: #13D1BE;
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  transition: background .6s ease;
+}
+main .content .cake-buy .buy-left .DaiJinQuan {
+  margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 20px;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-left .DaiJinQuan a {
+  color: #222;
+}
+main .content .cake-buy .buy-left .DaiJinQuan h4 {
+  font-size: 16px;
+  line-height: 26px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear {
+  padding-bottom: 20px;
+  margin-top: 17px;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .price {
+  float: left;
+  width: 140px;
+  height: 89px;
+  background-color: #eee;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 11px 10px 0;
+  color: #333;
+  font-size: 14px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .price span {
+  display: block;
+  font-size: 30px;
+  color: #f60;
+  border-bottom: 1px dashed #ccc;
+  line-height: 36px;
+  margin-bottom: 9px;
+  padding-bottom: 8px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .price span b {
+  font-weight: 400;
+  font-size: 14px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .name {
+  float: left;
+  width: 728px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .name .buybuybuy {
+  width: 120px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #f90;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  float: right;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 100px;
+}
+main .content .cake-buy .buy-left .DaiJinQuan .one-clear .name p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 1px;
+}
+main .content .cake-buy .buy-left .recommend {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+main .content .cake-buy .buy-left .recommend h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+main .content .cake-buy .buy-left .recommend .cont {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  padding: 33px 32px 26px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-left .recommend .cont ul {
+  width: 910px;
+  margin: 0;
+  padding: 0;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li {
+  float: left;
+  width: 130px;
+  margin-right: 20px;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li .pic {
+  position: relative;
+  height: 130px;
+  border-radius: 4px;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li .img-titleBox {
+  font-size: 14px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li .img-titleBox span {
+  width: 78px;
+  vertical-align: bottom;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .content .cake-buy .buy-left .recommend .cont ul li .img-titleBox b {
+  font-weight: 400;
+}
+main .content .cake-buy .buy-left .recommend .cont .cake-listclear {
+  padding: 25px 0 0 6px;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-left .recommend .cont .cake-listclear span {
+  display: block;
+  float: left;
+  margin: 0 20px 19px 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333;
+}
+main .content .cake-buy .buy-right {
+  width: 230px;
+  float: right;
+  padding-top: 34px;
+}
+main .content .cake-buy .buy-right a {
+  color: #222;
+}
+main .content .cake-buy .buy-right .you-like {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 16px 20px 0;
+  overflow: hidden;
+}
+main .content .cake-buy .buy-right .you-like h4 {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 12px;
+  color: #333;
+}
+main .content .cake-buy .buy-right .you-like ul {
+  margin: 0;
+  padding: 0;
+}
+main .content .cake-buy .buy-right .you-like ul li {
+  margin-bottom: 20px;
+}
+main .content .cake-buy .buy-right .you-like ul li a {
+  display: block;
+}
+main .content .cake-buy .buy-right .you-like ul li a .pic {
+  height: 106px;
+  border-radius: 4px;
+}
+main .content .cake-buy .buy-right .you-like ul li a .pic img {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main .content .cake-buy .buy-right .you-like ul li a .name {
+  font-size: 14px;
+  line-height: 20px;
+  color: #222;
+  margin: 10px 0 4px;
+}
+main .content .cake-buy .buy-right .you-like ul li a .addr {
+  font-size: 12px;
+  line-height: 17px;
+  color: #999;
+}
+main .content .cake-buy .buy-right .you-like ul li a .price {
+  font-size: 22px;
+  color: #f60;
+  line-height: 27px;
+}
+main .content .cake-buy .buy-right .you-like ul li a .price b {
+  font-weight: 400;
+  font-size: 14px;
+}
+main .content .near-cont h3 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #333;
+  width: 100px;
+}
+main .content .near-cont .near-listBox {
+  width: 1190px;
+  margin: 0 auto;
+  margin-top: 8px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 20px 6px 0;
+  overflow: hidden;
+  color: #999;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+main .content .near-cont .near-listBox ul {
+  margin: 0 auto;
+}
+main .content .near-cont .near-listBox ul li {
+  height: 241px;
+  float: left;
+  width: 235px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+main .content .near-cont .near-listBox ul li a {
+  display: block;
+  color: #222;
+  overflow: hidden;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background-color .8s;
+}
+main .content .near-cont .near-listBox ul li a .pic {
+  height: 120px;
+  border-radius: 4px;
+}
+main .content .near-cont .near-listBox ul li a .pic img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+main .content .near-cont .near-listBox ul li a .pic-name {
+  font-size: 16px;
+  line-height: 22px;
+  color: #222;
+  margin: 10px 0 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .content .near-cont .near-listBox ul li a .source {
+  color: #999;
+  font-size: 12px;
+  line-height: 17px;
+}
+main .content .near-cont .near-listBox ul li a .source span {
+  margin-left: 10px;
+}
+main .content .near-cont .near-listBox ul li a .source-car {
+  margin: 1px 0 3px;
+  min-height: 33px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .content .near-cont .near-listBox ul li a .price {
+  font-size: 20px;
+  line-height: 27px;
+  color: #f60;
+}
+main .content .near-cont .near-listBox ul li a .price b {
+  font-weight: 400;
+  font-size: 14px;
+}
+main .content .near-cont .near-listBox ul li a:hover {
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=misscake.css.map */

@@ -94,7 +94,7 @@ body{
                     }
                  label:after{   
                         position:absolute;top:2px;left:1px;display: none;width:12px;height:12px;content:"";
-                        background-image:url(../img/login/checkBox.png);//border: 1px solid $pub;
+                        background-image:url(../img/login/checkBox.png);
                         background-size:11px 12px;border-radius: 0px;
                 }
                 label:before{
@@ -199,7 +199,10 @@ body{
        }
     }
 }
-
+//提交时效果 登录中...
+.sub-btneff{
+    color:#bbb;background-image:linear-gradient(to top,#eeeeee,#eee);border:0!important
+}
 
 
 

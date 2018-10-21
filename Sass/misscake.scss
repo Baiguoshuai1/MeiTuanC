@@ -481,5 +481,279 @@ main{
                     }
                 }
             }
+            .pop{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+               // font-size: .26rem;
+                z-index: 10000;
+                background: rgba(0,0,0,.2);
+                transform: translateZ(0);
+                .pop-content{
+                    width: 100%;
+                    overflow: hidden;
+                    background: rgba(0,0,0,0);
+                    margin: 86px 0 10px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    .pop-content-little{
+                        width: 710px;
+                        padding: 0 80px;
+                        margin: auto;
+                        overflow-y: auto;
+                        height: 100%;
+                        color: #666;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        position: relative;
+                        .closeIMg{
+                            width: 40px;
+                            height: 40px;
+                            cursor: pointer;
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                        }
+                        h4{
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+                        .pop-content-little-header{
+                           
+                            padding-top: 71px;
+                           .pic{
+                                float: left;
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 4px;
+                                img{
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 4px;
+                                }
+                           }
+                           .dea{
+                                float: left;
+                                padding: 1px 0 0 40px;
+                                width: 500px;
+                                .name{
+                                    font-size: 26px;
+                                    line-height: 37px;
+                                    margin-bottom: 6px;
+                                    color: #222;
+                                }
+                                .little-header-cakename{
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                                .little-header-cakeprice{
+                                    font-size: 24px;
+                                    line-height: 29px;
+                                    color: #31bbac;
+                                    b{
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        span{
+                                            font-size: 22px;
+                                        }
+                                    }
+                                    b+span{
+                                        margin-left: 10px;
+                                        font-size: 12px;
+                                        color: #666;
+                                    }
+                                }
+                                .actions{
+                                    margin-top: 33px;
+                                    a{
+                                        text-align: center;
+                                        display: inline-block;
+                                        width: 118px;
+                                        height: 38px;
+                                        line-height: 38px;
+                                        background-color: #f90;
+                                        border: 1px solid #f90;
+                                        font-size: 14px;
+                                        color: #fff;
+                                        border-radius: 100px;
+                                    }
+                                    a:last-child{
+                                        background-color: #fff;
+                                        border: 1px solid #e5e5e5;
+                                        color: #666;
+                                        margin-left: 20px;
+                                    }
+                                }
+                           }
+                        }
+                        .order{
+                               width: 100%;
+                               padding-top: 40px;
+                               color: #666;
+                               overflow: hidden;
+                               h4{
+                                  margin-bottom: 6px;
+                               }
+                               .order-content{
+                                    border: 1px solid #e5e5e5;
+                                    background-color: #fff;
+                                    padding: 0 20px;
+                                    border-radius: 4px;
+                                    .order-content-cont{
+                                        height: 48px;
+                                        font-size: 14px;
+                                        line-height: 48px;
+                                        border-bottom: 1px solid #e5e5e5;
+                                        .fr{
+                                            float:right;
+                                            span{
+                                                display: inline-block;
+                                                width: 110px;
+                                                text-align: center;
+                                            }
+                                            .lastspan{
+                                                    text-align: right;
+                                                    padding: 0;
+                                                    width: 65px;
+                                            }
+                                        }
+                                    }
+                                    .order-content-name{
+                                        font-size: 14px;
+                                        line-height: 45px;
+                                        color: #222;overflow: hidden;
+                                        .fl{
+                                            width: 154px;
+                                            float: left;
+                                        }
+                                        .fr{
+                                            float: right;
+                                            .clear{
+                                                display: inline-block;
+                                                width: 105px;
+                                                text-align: center;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                            }
+                                            .title{
+                                                width: 173px;
+                                                padding: 0;
+                                                text-align: left;
+                                                display: inline-block;
+                                            }
+                                            .last{
+                                                text-align: right;
+                                                padding: 0;
+                                                width: 65px;
+                                            }
+                                        }
+                                    }
+                                    .order-content-total{
+                                        border-top: 1px solid #e5e5e5;
+                                        line-height: 49px;
+                                        text-align: right;
+                                        font-size: 14px;
+                                        .clear{
+                                            display: inline-block;
+                                            margin-left: 53px;
+                                            b{
+                                                font-weight: 400;
+                                                color: #f60;
+                                            }
+                                        }
+                                    }
+                               }
+                               .remarks{
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                    margin-top: 10px;
+                                    .clear{
+                                        display: block
+                                    }
+                               }
+                               .notes{
+                                    padding-top: 40px;
+                                     .cont{
+                                        border: 1px solid #e5e5e5;
+                                        background-color: #fff;
+                                        padding: 0 20px 20px;
+                                        border-radius: 4px;
+                                        overflow: hidden;
+                                        p{
+                                          margin-top: 20px;
+                                          overflow: hidden;
+                                          .fl{
+                                            width: 101px;
+                                            float: left;
+                                            font-size: 14px;
+                                            color: #222;
+                                            }
+                                           .fr{
+                                                float: left;
+                                                width: 552px;
+                                                font-size: 12px;
+                                                color: #666;
+                                                line-height: 20px;
+                                           }
+                                        }
+                                    }
+                               }
+                               .photo{
+                                   padding-top: 40px;
+                                   overflow: hidden;
+                                   ul{
+                                        width: 710px;
+                                       li{
+                                           float: left;
+                                            width: 220px;
+                                            height: 129px;
+                                            border-radius: 4px;
+                                            margin-right: 10px;
+                                       }
+                                      .noMr{
+                                            margin-right: 0;
+                                            img{
+                                                display: block;
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 4px;
+                                                border: 1px solid #ddd;
+                                            }
+                                      }
+                                   }
+                               }
+                               .line{
+                                    margin-top: 40px;
+                                    height: 1px;
+                                    overflow: hidden;
+                                    border-bottom: 1px solid #e5e5e5;
+                               }
+                               .footer{
+                                    margin: 38px 0;
+                                    text-align: center;
+                                    span{
+                                        display: inline-block;
+                                        border: 1px solid #e5e5e5;
+                                        font-size: 14px;
+                                        color: #31bbac;
+                                        line-height: 38px;
+                                        padding: 0 15px;
+                                        border-radius: 100px;
+                                        a{
+                                            color: #222;
+                                        }
+                                    }
+                               }
+                           }
+                    }
+                }
+            }
         }
-    

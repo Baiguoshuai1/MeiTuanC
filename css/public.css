@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*--------清间距---------*/
+body, h1, h2, h3, h4, h5, h6, p, span, ul, dl, ol, li, dl, dt, dd, a, img, input {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul, dl {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+/*--------定义全局样式样式-----------*/
+body {
+  font-size: 12px;
+  font-family: "微软雅黑";
+  color: #666;
+}
+
+/*——------超链接样式--------------*/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #28bfac;
+}
+
+/*--------全局样式--------------------*/
+.w {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.loginW {
+  width: 980px;
+}
+
+.regW {
+  width: 980px;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("../font/iconfont.eot");
+  src: url("../font/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/iconfont.woff") format("woff"), url("../font/iconfont.ttf") format("truetype"), url("../font/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #9fa09f;
+}
+
+/*# sourceMappingURL=public.css.map */

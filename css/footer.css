@@ -1,0 +1,77 @@
+/*----------------------------------------footer-----------------------------*/
+footer {
+  background-color: #f7f7f7;
+}
+footer .content {
+  width: 1190px;
+  float: left;
+  box-sizing: border-box;
+  line-height: 2;
+  text-align: left;
+  padding: 40px 45px;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  margin-top: 40px;
+  border-bottom: 1px solid #E5E5E5;
+}
+footer .content .column {
+  width: 20%;
+  float: left;
+}
+footer .content .column dd {
+  color: #666;
+}
+footer .content .column .dtTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+footer .content .column .dtTitle:last-child a {
+  color: #666;
+}
+footer .content .column dd > a {
+  color: #666;
+  font-size: 12px;
+}
+footer .content .column dd:last-child {
+  padding-bottom: 20px;
+}
+footer .content .column a:hover {
+  color: #31BBAC;
+}
+footer .content .column .dtTitle:last-child a:hover {
+  color: #31BBAC;
+}
+footer .banquan {
+  float: left;
+  width: 100%;
+  color: #999;
+  text-align: right;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+footer .banquan a {
+  color: #999;
+}
+footer .banquan a:hover {
+  color: #31BBAC;
+}
+footer .banquan .banquan-left {
+  text-align: left;
+  float: left;
+}
+footer .banquan .banquan-right {
+  float: right;
+}
+footer .banquan .banquan-right .banquan-right-Img img {
+  width: 109px;
+  height: 38px;
+  margin-right: 2px;
+  float: left;
+  padding-top: 6px;
+}
+
+/*# sourceMappingURL=footer.css.map */

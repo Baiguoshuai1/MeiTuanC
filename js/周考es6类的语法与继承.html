@@ -30,11 +30,10 @@
 $(function(){
 			class Person{
 			constructor(id,name,sex){
-				if(arguments.length>0){
+				
 					this.id=id;
 					this.name=name;
 					this.sex=sex;
-				}
 			}
 			eat(){
 				alert(this.name+"在吃")
@@ -60,7 +59,7 @@ $(function(){
 	let s=new Person(01,"wo",18);
 	//s.eat()
 	let s2=new Programmer(02,"ni",20,22)
-	//s2.eat()
+	s2.eat()
 	//	console.log(s2.language)
 		
 	$("p").add("<span>Again</span>").add("li").appendTo("body").html("cc")		//add是“和”的意思
@@ -73,8 +72,22 @@ $(function(){
 
 })
 	
-	
-	
+	class Person{
+		constructor(id,name,color){
+			this.id=id;
+			this.name=name;
+			this.color=color;
+		}
+		eat(){
+			alert(this.id+"的"+this.color+"真好")
+		}
+	}
+	class Programer extends Person{
+		constructor(id,name,color,bb){
+			super(id,name,color)
+			this.bb=bb;
+		}
+	}
 	
 	
 	

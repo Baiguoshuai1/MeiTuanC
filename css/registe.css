@@ -1,0 +1,183 @@
+body {
+  color: #666;
+  font-size: 14px;
+}
+body a:hover {
+  text-decoration: underline;
+}
+body header {
+  display: block;
+  border-bottom: 2px solid #2bb8aa;
+}
+body header .header-contentBox {
+  padding: 10px 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body header .header-contentBox .header-left {
+  display: inline-block;
+  float: left;
+}
+body header .header-contentBox .header-right {
+  float: right;
+  line-height: 36px;
+}
+body header .header-contentBox .header-right .tip {
+  margin-right: 10px;
+}
+body header .header-contentBox .header-right .login-btn {
+  padding: 3px 10px;
+  background-color: #2bb8aa;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 2px;
+}
+body .content {
+  overflow: hidden;
+  padding-top: 30px;
+  margin: 0 auto 30px;
+  column-rule: #333;
+}
+body .content .inline-tip {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 6px 0;
+  line-height: 24px;
+  font-size: 12px;
+  color: #999;
+  vertical-align: top;
+}
+body .content .input-tip {
+  color: #666;
+  display: none;
+}
+body .content .input-tip img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: -3px;
+}
+body .content .pubInputBox {
+  padding: 8px 0 8px 110px;
+  position: relative;
+  margin: 0;
+}
+body .content .pubInputBox label {
+  position: absolute;
+  left: 0px;
+  width: 100px;
+  padding-top: 6px;
+  font-size: 14px;
+  text-align: right;
+  color: #333;
+  line-height: 1.5;
+}
+body .content .formInput {
+  width: 248px;
+  height: 24px;
+  padding: 5px;
+  line-height: 24px;
+  border: 1px solid #aaa;
+  vertical-align: top;
+}
+body .content .form-content-oneBox a {
+  color: #2bb8aa;
+}
+body .content .form-content-twoBox {
+  padding-left: 110px;
+  line-height: 1.5;
+}
+body .content .form-content-twoBox .phoneNum-btn {
+  padding: 2px 8px 1px;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.5;
+  letter-spacing: .1em;
+  background-color: #dedede;
+  border-radius: 2px;
+  border: 1px solid #e3e3e3;
+  border-bottom: 1px solid #aaa;
+  background-image: linear-gradient(to bottom, #f7f7f7, #dedede);
+}
+body .content .form-content-twoBox .phoneNum-btn:hover {
+  background-image: linear-gradient(to top, #f7f7f7, #f7f7f7);
+}
+body .content .form-content-fourBox {
+  padding-bottom: 27px;
+}
+body .content .form-content-fourBox .strength {
+  position: absolute;
+  width: 260px;
+  top: 50px;
+  left: 110px;
+  background: #eee;
+}
+body .content .form-content-fourBox .strength .strength-colorBox {
+  background: #d3ebee;
+  height: 20px;
+  width: 0;
+  overflow: hidden;
+  transition: all .4s linear;
+  -webkit-transition: all .4s linear;
+}
+body .content .form-content-fourBox .strength .strength-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .content .form-content-fourBox .strength .strength-letter span {
+  display: block;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  width: 85px;
+  border-right: 2px solid #fff;
+  color: #fff;
+}
+body .content .form-content-fourBox .strength .strength-letter .last-label {
+  border-right: 0;
+}
+body .content .sub-btn {
+  background-color: #2eb7aa;
+  background-image: -webkit-linear-gradient(top, #2ec3b4, #2db3a6);
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 20px 5px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .1em;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #008177;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+body .content .sub-btn:hover {
+  background-image: linear-gradient(to bottom, #2bb8aa, #2eb7aa);
+}
+body .content .term {
+  padding: 3px 10px 3px 110px;
+  margin: 0 auto 8px;
+}
+body .content .term a {
+  font-size: 13px;
+  color: #2bb8aa;
+}
+body footer {
+  border-top: 1px solid #EEE;
+  padding-top: 20px;
+  text-align: center;
+  color: #999;
+}
+body footer p a {
+  font-size: 12px;
+  color: #999;
+}
+
+/*# sourceMappingURL=registe.css.map */

@@ -1,0 +1,159 @@
+body {
+  margin: 6px;
+  background-color: #fff;
+}
+body .shop-car {
+  background-color: #fff;
+}
+body .shop-car .shop-car-listBox {
+  width: 980px;
+  margin: 10px auto 0;
+  padding: 10px 0 65px;
+}
+body .shop-car .shop-car-listBox .row {
+  padding: 12px;
+  border-top: 1px solid #E5E5E5;
+  text-align: right;
+}
+body .shop-car .shop-car-listBox table {
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body .shop-car .shop-car-listBox table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+body .shop-car .shop-car-listBox table tbody th {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #F7F7F7;
+  color: #222;
+}
+body .shop-car .shop-car-listBox table tbody .desc {
+  width: 500px;
+  text-align: left;
+}
+body .shop-car .shop-car-listBox table tbody .unit-price {
+  width: 100px;
+}
+body .shop-car .shop-car-listBox table tbody .num {
+  width: 180px;
+}
+body .shop-car .shop-car-listBox table tbody .total-price {
+  text-align: right;
+}
+body .shop-car .shop-car-listBox table tbody td {
+  padding: 12px 16px;
+  color: #666;
+  font-size: 15px;
+}
+body .shop-car .shop-car-listBox table tbody td a {
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+}
+body .shop-car .shop-car-listBox table tbody td .input-number {
+  display: flex;
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+  width: 104px;
+  margin-left: 38px;
+}
+body .shop-car .shop-car-listBox table tbody td .input-number button {
+  position: relative;
+  box-sizing: content-box;
+  font-size: 0;
+  outline: 0;
+  background-color: #fff;
+  cursor: pointer;
+  vertical-align: top;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+  border: none;
+}
+body .shop-car .shop-car-listBox table tbody td .input-number button i {
+  position: absolute;
+  z-index: 3;
+  font-size: 15px;
+  right: 10px;
+  top: 10px;
+}
+body .shop-car .shop-car-listBox table tbody td .input-number input {
+  color: #222;
+  border: 1px solid #E5E5E5;
+  border-top: none;
+  border-bottom: none;
+  vertical-align: top;
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  width: 34px;
+  height: 34px;
+}
+body .shop-car .shop-car-listBox table tbody td:first-child {
+  text-align: left;
+}
+body .shop-car .shop-car-listBox table tbody td:last-child {
+  color: #f76120;
+  text-align: right;
+}
+body .shop-car .shop-car-listBox .discount {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+}
+body .shop-car .shop-car-listBox .rowprice .total-price {
+  font-size: 12px;
+  font-weight: bolder;
+  color: #666;
+  line-height: 30px;
+}
+body .shop-car .shop-car-listBox .rowprice .total-price-right {
+  font-size: 20px;
+  color: #f76120;
+}
+body .shop-car .shop-car-listBox .rowprice .total-price-right b {
+  font-weight: 400;
+}
+body .shop-car .shop-car-listBox .send-phone {
+  text-align: left;
+  font-size: 12px;
+  color: #222;
+}
+body .shop-car .shop-car-listBox .send-phone a {
+  color: #2bb8aa;
+}
+body .shop-car .shop-car-listBox .btn-box input {
+  display: inline-block;
+  padding: 5px 20px 4px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #2db3a6;
+  background-image: linear-gradient(to bottom, #2ec3b4, #2db3a6);
+  border: 0;
+  border-bottom: 1px solid #008177;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  float: right;
+}
+body .shop-car .shop-car-listBox .btn-box input:hover {
+  background-image: linear-gradient(to bottom, #2db3a6, #2db3a6);
+}
+body footer {
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.tr-style {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+/*# sourceMappingURL=shopcar.css.map */

@@ -1,0 +1,21 @@
+/*---------------------------------.three---------------------------------------*/
+.three-contain-navBox {
+  background-image: linear-gradient(to right, #ff714a 2%, #fc4242 97%);
+}
+
+.three-contain-nextBox a {
+  width: 233px;
+  height: 290px;
+}
+
+.three-contain-nextBox a .imgBox {
+  height: 120px;
+}
+
+.three-contentBox .clearfix {
+  height: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=Main-three.css.map */

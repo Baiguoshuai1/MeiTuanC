@@ -171,6 +171,9 @@
  				type:"POST",
  				url:"../php/loginCheck.php",
  				data:$("#form2").serialize(),
+ 				beforeSend:function(){
+ 					$(".sub-btn").attr({value:"登录中...",style:"color:#bbb;background-image:linear-gradient(to top,#eeeeee,#eee);border:0"})
+ 				},
  				success:function(mes){
  					if(mes==($("#t1").val())){
  						if($("#autologin:eq(0)").is(":checked")){
@@ -189,6 +192,7 @@
  						$(".validate")[0].style.visibility="visible";
  						$(".prompt").html("账号或密码错误，请重新输入")
  						$(".userYanzheng").val("");
+ 						$(".sub-btn").attr({value:"登录",style:""})
  						//if($(".form-check")[0].style.display=="block"){
  							radomCheckIMg();
  							//}
@@ -209,26 +213,27 @@
 			}
  		})
  			
- 		$(".normal").click(function(){
+ 		$(".normal").click(function(){		//点击label
  			//$(this).children("span").children("i").attr("style","display:block")
  			//$("this").children("input+label").css({borderColor:"pink"})
  			if($("#autologin:eq(0)").is(":checked")){
  				$(this).children("span").attr("style","border-color: #2bb8aa")
+ 			
  			}
-// 			}else{
-// 				$(this).children("sapn").attr("style","")
+// 			else{
+// 				$(this).children("sapn").attr("style","border-color: #ddd")
 // 			}
  			console.log($("#autologin:eq(0)").is(":checked"))
  		})
 // 		if($("#autologin")[0].style.checked=="checked"){
 // 			alert("yes")
 // 		}
-		$(".normal").children("span").hover(function(){
-			$(this).attr("style","border-color: #2bb8aa;")
+		$(".normal").hover(function(){		//鼠标移上label
+			$(this).children("span").attr("style","border-color: #2bb8aa;")
 			console.log($("#autologin:eq(0)").is(":checked"))
 		},function(){
 			if(!$("#autologin:eq(0)").is(":checked")){
-			$(this).attr("style","border-color:#ddd")
+			$(this).children("span").attr("style","border-color:#ddd")
 			}
 			console.log($("#autologin:eq(0)").is("checked"))
 		})
