@@ -33,6 +33,7 @@
 
 .left-banner-container-lie ul {
   padding-bottom: 0px;
+  position: relative;
 }
 
 .left-banner-container-lie ul li {
@@ -40,6 +41,7 @@
   height: 25.5px;
   text-align: left;
   box-sizing: border-box;
+  position: relative;
 }
 
 .left-banner-container-lie ul li i:first-child {
@@ -52,16 +54,17 @@
   font-size: 6px;
   color: #fff;
   font-weight: 600;
-  float: right;
   padding: 6px 0;
-  padding-left: 43px;
+  position: absolute;
+  top: 0;
+  right: 12px;
 }
 
 .left-banner-container-content {
-  display: block;
+  display: none;
   position: absolute;
   left: 230px;
-  top: 60px;
+  top: 0;
   z-index: 3;
   background-color: #fff;
   color: #000;

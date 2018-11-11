@@ -1,5 +1,10 @@
+html {
+  font-size: 12px;
+}
+
 body {
   background: #f6f6f6;
+  font-size: 12px;
 }
 
 /*---------------------------------------------------header-----------------------------------------------------------*/
@@ -129,6 +134,18 @@ header a:hover {
   border-top: none;
   background-color: #fff;
   display: block !important;
+}
+
+.bl {
+  display: block;
+}
+
+.non {
+  display: none;
+}
+
+.inl {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=header.css.map */

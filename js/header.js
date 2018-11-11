@@ -13,7 +13,7 @@ $(function(){
 		}
 		$(".exit").click(function(){		//退出删除cookie
 			deleteCookie();
-			location.href="MeiTuanIndex.html"
+			location.href="index.html"
 		})
 		if(cookieJson.username!==undefined){
 			$(".username").html(function(){		//改变用户名
@@ -22,7 +22,7 @@ $(function(){
 				$(".visBox").add($(".vis-personBox")).attr("style","display: none;")
 				$(".noBox").attr("style","display:inline-block")
 				$(".no-personBox").attr("style","display: block;")
-				$(".username").prev().attr("src","../img/35ad1f9253761ea6ff822b5e659f234f3758.png")
+				$(".username").prev().attr("src","img/35ad1f9253761ea6ff822b5e659f234f3758.png")
 		}
 		
 		$(".ul-nav li").each(function(){

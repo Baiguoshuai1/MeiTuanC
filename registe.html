@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>注册 | 白国帅的美团网</title>
-		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
-		<link rel="stylesheet" href="../css/public.css"/>
-		<link rel="stylesheet" href="../css/registe.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/public.css"/>
+		<link rel="stylesheet" href="css/registe.css"/>
 	</head>
 	<body>
 		<header>
 			<div class="regW header-contentBox">
-				<a href="MeiTuanIndex.html" class="header-left"><img width="54" height="36" src="../img/login/1.png" /></a>
+				<a href="index.html" class="header-left"><img width="54" height="36" src="img/login/1.png" /></a>
 				<div class="header-right">
 					<span class="tip">已有美团账号?</span>
 					<a href="login.html" class="login-btn">登录</a>
@@ -25,7 +25,7 @@
 						<input class="formInput" type="text" name='username' id="t1" msg="手机号"/ >
 						<span class="inline-tip spec">注册成功后，全美团通用</span>	
 						<span class="inline-tip input-tip">
-							<img class="checkingImg" src="../img/login/22.png"/>
+							<img class="checkingImg" src="img/login/22.png"/>
 							<span class="changeText1">请输入您的手机号码</span>
 							<a href="login.html" style="display: none">直接登录</a>
 						</span>
@@ -38,12 +38,12 @@
 					<div class="pubInputBox form-content-threeBox">
 						<label>短信动态码</label><input class="formInput" type="text" name="userphone" id="t2" msg="动态码" />
 						<span class="inline-tip input-tip">
-							<img src="../img/login/22.png"/><span>请随便输入</span>
+							<img src="img/login/22.png"/><span>请随便输入</span>
 						</span>
 					</div>
 					<div class="pubInputBox form-content-fourBox">
 						<label>创建密码</label><input class="formInput" type="password" name='userpass' id="t3" msg="密码" />
-						<span class="inline-tip input-tip"><img src="../img/login/22.png"/>
+						<span class="inline-tip input-tip"><img src="img/login/22.png"/>
 							<span>请填写密码</span>
 						</span>
 						<div class="strength">
@@ -59,7 +59,7 @@
 						<label>确认密码</label>
 						<input class="formInput" type="password" id="t4" msg="密码" />
 						<span class="inline-tip input-tip">
-							<img src="../img/login/22.png"/>
+							<img src="img/login/22.png"/>
 							<span>请再次输入密码</span>
 						</span>
 					</div>
@@ -81,16 +81,16 @@
 		</footer>
 	</body>
 </html>
-<script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
-<script type="text/javascript" src="../js/jquery.cookie.js" ></script>
-<script type="text/javascript" src="../js/cookieJson.js" ></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="js/cookieJson.js" ></script>
 <script language="JavaScript">
 $(function(){
 	var result=null;
 	function blu(){
 			 $.ajax({
 				type:"POST",
-				url:"../php/checkName.php",
+				url:"php/checkName.php",
 				async:true,
 				data:{username:$("#t1").val()},
 				success:function(mes){
@@ -103,15 +103,15 @@ $(function(){
 		$(".input-tip")[0].style.display="inline-block";
 		$(".input-tip").children(".changeText1").html("");
 		if(mes=="ok"){
-			$(".checkingImg").attr("src","../img/login/dui.png")
+			$(".checkingImg").attr("src","img/login/dui.png")
 		}else if(mes=="no"){
 			$("#t1")[0].style.borderColor="red";
-			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".checkingImg").attr("src","img/login/cuo.png")
 			$(".input-tip").children(".changeText1").html("该用户已被绑定,");
 			$(".input-tip")[0].lastElementChild.style="block";
 		}else{
 			$('#t1')[0].style.borderColor="red";
-			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".checkingImg").attr("src","img/login/cuo.png")
 			$(".input-tip").children(".changeText1").html("网络出现问题，请重试");
 	}
 }
@@ -159,11 +159,11 @@ $(function(){
 		 if($(this).val()==""){
 		 	$(this)[0].style.borderColor="red";
 			$(".input-tip")[0].style.display="inline-block";
-			$(".checkingImg").attr("src","../img/login/cuo.png")
+			$(".checkingImg").attr("src","img/login/cuo.png")
 			$(".input-tip").children(".changeText1").html("请输入您的手机号码");
 		}else{
 			$(".input-tip")[0].style.display="inline-block";
-			$(".checkingImg").attr("src","../img/login/checking.png")
+			$(".checkingImg").attr("src","img/login/checking.png")
 			$(".input-tip").children(".changeText1").html("检查中...");
 			blu();
 		}
@@ -184,12 +184,12 @@ $(function(){
 				ret1=Tru();
 				if(!ret1){
 					$(this).nextAll("span")[0].style.display="inline-block";
-					$(this).nextAll("span").children("img").attr("src","../img/login/cuo.png")
+					$(this).nextAll("span").children("img").attr("src","img/login/cuo.png")
 					$(this).nextAll("span").children("span").html("两次输入的密码不一致，请重新输入")
 					$(this)[0].style.borderColor="red";
 				}else{
 		 			$(this).nextAll("span")[0].style.display="inline-block";
-					$(this).nextAll("span").children("img").attr("src","../img/login/dui.png")
+					$(this).nextAll("span").children("img").attr("src","img/login/dui.png")
 					$(this).nextAll("span").children("span").html("");
 				}
 			}					
@@ -199,13 +199,13 @@ $(function(){
 	$("#t3").blur(function(){
 		if($(this).val().length<6){
 			$(this).nextAll("span")[0].style.display="inline-block";
-			$(this).nextAll("span").children("img").attr("src","../img/login/cuo.png")
+			$(this).nextAll("span").children("img").attr("src","img/login/cuo.png")
 			$(this).nextAll("span").children("span").html("密码长度太短，至少6个字符")
 			$(this)[0].style.borderColor="red";
 			psdLength=false;
 		}else{
 			$(this).nextAll("span")[0].style.display="inline-block";
-			$(this).nextAll("span").children("img").attr("src","../img/login/dui.png")
+			$(this).nextAll("span").children("img").attr("src","img/login/dui.png")
 			$(this).nextAll("span").children("span").html("");
 			psdLength=true;
 		}
@@ -253,7 +253,7 @@ $(function(){
 		if(ret1&&ret2&&result=="ok"&&psdLength){
 			$.ajax({							//接口
 			   type:"POST",
-			   url:"../php/save.php",			//地址
+			   url:"php/save.php",			//地址
 			   data:$('#form1').serialize(),	//json数据   key/value
 			 //data:{username:$("#t1").val(),userpass:$("#t2").val(),}
 			 //data:{username:$("#t1")[0].value,userpass:$("#t2")[0].value},						//传输的数据
@@ -266,7 +266,7 @@ $(function(){
 						if(cookieJson["back-html"]=="misscake.html"){
  							location.href="misscake.html"
  						}else{
- 							location.href="MeiTuanIndex.html";
+ 							location.href="index.html";
  						}					
 					//location.href=document.referrer||host + "MeiTuanLogin1.html";
 					//console.log(document.referrer).

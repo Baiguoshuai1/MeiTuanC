@@ -290,4 +290,10 @@ body footer .ceil-box a img {
   vertical-align: middle;
 }
 
+.sub-btneff {
+  color: #bbb;
+  background-image: linear-gradient(to top, #eeeeee, #eee);
+  border: 0 !important;
+}
+
 /*# sourceMappingURL=login.css.map */

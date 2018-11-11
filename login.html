@@ -3,26 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>登录|白国帅的美团网</title>
-		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
-		<link rel="stylesheet" href="../css/public.css"/>
-		<link rel="stylesheet" href="../css/login.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/public.css"/>
+		<link rel="stylesheet" href="css/login.css"/>
 	</head>
 	<body>
 		<header class="loginW">
-			<a href="MeiTuanIndex.html"><img src="../img/login/1.png" /></a>
+			<a href="index.html"><img src="img/login/1.png" /></a>
 		</header>
 		<div class="content">
 			<div class="loginW body-content">
 				<div class="left-imgBox">
-					<img src="../img/login/bk.jpg" />
+					<img src="img/login/bk.jpg" />
 				</div>
 				<div class="right-loginBox">
 					<form id="form2">
 						<div class="validate" style="visibility: hidden;">
-							<img src="../img/login/cuo.png"/><span class="prompt">请输入账号</span>
+							<img src="img/login/cuo.png"/><span class="prompt">请输入账号</span>
 						</div>
 						<div class="login-typeBox" >
-							<span>账号登录</span><a>手机动态码登录<img width="11" height="14" src="../img/login/phone.png"/></a>
+							<span>账号登录</span><a>手机动态码登录<img width="11" height="14" src="img/login/phone.png"/></a>
 						</div>
 						<div class="elem">
 							<i class="iconfont">&#xe8da;</i>
@@ -34,7 +34,7 @@
 						</div>
 						<div class="elem form-check">
 							<input class="userYanzheng" type="text" placeholder="验证码" msg="验证码"/>
-							<img height="36" width="72" class="yanzhengImg" src="../img/login/captcha (1).jpg"/>
+							<img height="36" width="72" class="yanzhengImg" src="img/login/captcha (1).jpg"/>
 							<span class="yanzheng-text">看不清楚？换一张</span>
 						</div>
 						<div class="setcookie-box">
@@ -73,7 +73,7 @@
 					<li><a href="">帮助中心</a></li>
 					<li class="last"><a href="">美团手机版</a></li>
 				</ul>
-				<a href=""><img width="276" height="24" src="../img/login/footer-commitment.png"/></a>
+				<a href=""><img width="276" height="24" src="img/login/footer-commitment.png"/></a>
 			</div>
 			<div class="floor-box">
 				<p>
@@ -83,9 +83,9 @@
 		</footer>
 	</body>
 </html>
- <script type="text/javascript" src="../js/jquery-3.3.1.min.js" ></script>
- <script type="text/javascript" src="../js/jquery.cookie.js" ></script>
- <script type="text/javascript" src="../js/cookieJson.js" ></script>
+ <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+ <script type="text/javascript" src="js/jquery.cookie.js" ></script>
+ <script type="text/javascript" src="js/cookieJson.js" ></script>
  <script language="JavaScript">
  	$(function(){
  		var checkCount=0;
@@ -93,7 +93,7 @@
    		function radomCheckIMg(){		//生成随机验证码图片
 	 		$(".yanzhengImg").attr("src",function(){	
 	 			checkNumber=parseInt(Math.random()*20);
-	 			return "../img/login/captcha ("+checkNumber+").jpg";	//函数里面的图片号码不能再使用变量，得直接使用随机数
+	 			return "img/login/captcha ("+checkNumber+").jpg";	//函数里面的图片号码不能再使用变量，得直接使用随机数
 	 		})
    		}
 	
@@ -169,7 +169,7 @@
  			if(checkCount>=2&&ret1&&ret2&&($(".userYanzheng").val()!=="")||ret2&&checkCount<2){
  				$.ajax({
  				type:"POST",
- 				url:"../php/loginCheck.php",
+ 				url:"php/loginCheck.php",
  				data:$("#form2").serialize(),
  				beforeSend:function(){
  					$(".sub-btn").attr({value:"登录中...",style:"color:#bbb;background-image:linear-gradient(to top,#eeeeee,#eee);border:0"})
@@ -185,7 +185,7 @@
  						if(cookieJson["back-html"]=="misscake.html"){
  							location.href="misscake.html"
  						}else{
- 							location.href="MeiTuanIndex.html";
+ 							location.href="index.html";
  						}
  					}else{
  						checkCount++;
